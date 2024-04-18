@@ -1,0 +1,15 @@
+.experience{
+    .content-block{
+        padding: 32px;
+        height: 487px;
+        @include short-query(992px , 1199px) {
+            padding: 24px;
+        }
+        @include media-query(992px) {
+            height: auto;
+        }
+        @include media-query(492px) {
+            padding: 24px;
+        }
+    }
+}

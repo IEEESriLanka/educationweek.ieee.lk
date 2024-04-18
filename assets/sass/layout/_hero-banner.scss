@@ -1,0 +1,35 @@
+.hero-banner{
+    @include media-query(992px) {
+        margin-top: 80px;
+    }
+    .content-block{
+        height: 527px;
+        padding: 48px 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include media-query(992px) {
+            height: auto;
+            margin-bottom: 24px;
+        }
+        @include media-query(492px) {
+            padding: 32px 24px;
+        }
+        .text-block{
+            max-width: 543px;
+            @include media-query(992px) {
+                margin-bottom: 48px;
+            }
+        }
+    }
+    .img-block{
+        height: 527px;
+        display: grid;
+        align-content: end;
+        justify-content: center;
+        @include media-query(992px) {
+            height: auto;
+            padding-top: 32px;
+        }
+    }
+}
