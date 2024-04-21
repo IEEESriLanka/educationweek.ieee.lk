@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: https://educationweek.ieee.lk/sitemap.xml
