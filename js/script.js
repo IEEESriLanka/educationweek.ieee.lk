@@ -22,4 +22,7 @@ hamburger.addEventListener('click', function() {
     nav.classList.toggle('active');
 });
 
+$(function() {
+    $('img.lazy').lazyload();
+});
 
