@@ -1011,6 +1011,23 @@ footer .cont .content .left p {
   }
   
   
+footer .cont .content {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .cont .content .left,
+footer .cont .content .right {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+footer .cont .content .left p,
+footer .cont .content .right p{
+  text-align: center;
+}
+
 }
 
 
