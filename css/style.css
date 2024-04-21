@@ -30,7 +30,7 @@
   --transition-slow-1: all 1s linear;
   --transition-slow-2: all 2s linear;
 
-  --cont-width: 1200px;
+  --cont-width: 1320px;
 
   --box-shadow: 0px 0px 0px 0px rgba(33, 38, 39, 0.05),
     2px 2px 6px 0px rgba(33, 38, 39, 0.05),
@@ -457,9 +457,9 @@ section .cont .organizers .content .organizer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: calc(25% - 60px / 4);
+  /* width: calc(25% - 60px / 4); */
   background: var(--bg-gradient);
-  max-height: 300px;
+  max-height: 200px;
   aspect-ratio: 1/1;
   border-radius: var(--border-radius-30);
   box-shadow: var(--box-shadow);
@@ -691,6 +691,160 @@ section .cont .organizers .content .organizer .name {
   background: var(--primary-color);
 }
 
+/* Shedules */
+
+#schedule{
+
+}
+#schedule .cont .content{
+  align-items: center ;
+  justify-content: center;
+
+}
+#schedule .cont .content .shedule-table-container{
+  display: flex;
+  width: 100%;
+  align-items: center ;
+  justify-content: center;
+
+}
+#schedule .cont .content .shedule-table-container table{
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+#schedule .cont .content .shedule-table-container table colgroup col.title{
+  max-width: 24%;
+  width: 100%;
+}
+#schedule .cont .content .shedule-table-container table colgroup col.day1{
+  max-width: 38%;
+  width: 100%;
+}
+#schedule .cont .content .shedule-table-container table colgroup col.day2{
+  max-width: 38%;
+  width: 100%;
+}
+
+#schedule .cont .content .shedule-table-container table thead tr th, #schedule .cont .content .shedule-table-container table tbody tr td, #schedule .cont .content .shedule-table-container table tbody tr th{
+  text-align: center;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+
+}
+#schedule .cont .content .shedule-table-container table tbody tr td.titile{
+  background: var(--bg-gradient);
+
+}
+#schedule .cont .content .shedule-table-container table tbody tr td.titile .title-cont, #schedule .cont .content .shedule-table-container table thead tr th.title .title-cont{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  
+}
+#schedule .cont .content .shedule-table-container table tbody tr td.titile .title-cont .icon, #schedule .cont .content .shedule-table-container table thead tr th.title .title-cont .icon{
+  /* position: absolute;
+  left: 10px; */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+
+}
+#schedule .cont .content .shedule-table-container table tbody tr td.titile .title-cont .icon svg, #schedule .cont .content .shedule-table-container table thead tr th.title .title-cont .icon svg{
+  fill: var(--primary-color);
+  width: 20px;
+  height: 20px;
+}
+#schedule .cont .content .shedule-table-container table thead tr th.title .title-cont .icon svg{
+  fill: var(--white-color);
+}
+#schedule .cont .content .shedule-table-container table tbody tr td.titile .title-cont span{
+  font-weight: 600;
+  color: var(--primary-color);
+
+}
+/* #schedule .cont .content .shedule-table-container table tbody tr:nth-child(even) td.titile{
+  font-weight: 600;
+  background-color: #697;
+  color: var(--white-color);
+
+} */
+/* #schedule .cont .content .shedule-table-container table tbody tr:nth-child(odd){
+  background-color: #e8f3ff;
+
+}
+#schedule .cont .content .shedule-table-container table tbody tr:nth-child(even){
+  background-color: #eaffea;
+
+} */
+#schedule .cont .content .shedule-table-container table tbody tr{
+background: var(--bg-gradient);
+}
+
+
+#schedule .cont .content .shedule-table-container table thead tr{
+  background-color: var(--primary-color);
+}
+#schedule .cont .content .shedule-table-container table thead tr th{
+  color: var(--bg-color);
+}
+
+#schedule .cont .content .shedule-table-container table thead tr th.title{
+  background-color: var(--primary-color);
+}
+#schedule .cont .content .shedule-table-container table thead tr th.title .title-cont h3{
+  font-size: 30px;
+  color: var(--white-color);
+}
+#schedule .cont .content .shedule-table-container table thead tr th.day1{
+  background-color: #004E95;
+}
+#schedule .cont .content .shedule-table-container table thead tr th.day2{
+  background-color: #ED2938;
+}
+#schedule .cont .content .shedule-table-container table thead tr th .day-cont h3, #schedule .cont .content .shedule-table-container table thead tr th .day-cont p{
+  color: var(--white-color);
+}
+#schedule .cont .content .shedule-table-container table thead tr th .day-cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#schedule .cont .content .shedule-table-container table thead tr th .day-cont h3{
+  font-size: 30px;
+}
+
+#schedule .cont .content .shedule-table-container table thead tr th .day-cont p{
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.2;
+  max-width: 250px;
+}
+#schedule .cont .content .shedule-table-container table tbody tr td .lists{
+  display: flex;
+  flex-direction: column;
+}
+#schedule .cont .content .shedule-table-container table tbody tr td:nth-child(2), #schedule .cont .content .shedule-table-container table tbody tr td:nth-child(2) sup, #schedule .cont .content .shedule-table-container table tbody tr td:nth-child(2) div span{
+  color: #004E95;
+}
+#schedule .cont .content .shedule-table-container table tbody tr td:nth-child(3), #schedule .cont .content .shedule-table-container table tbody tr td:nth-child(3) sup, #schedule .cont .content .shedule-table-container table tbody tr td:nth-child(3) div span{
+  color: #ED2938;
+}
+
+
+
+
+
 /* Footer */
 
 footer {
@@ -738,3 +892,144 @@ footer .cont .content .left p {
   font-size: 16px;
   font-weight: 500;
 }
+
+/* Responsive */
+
+@media screen and (max-width: 1400px) {
+  :root{
+    --cont-width: 1140px;
+  }
+
+}
+@media screen and (max-width: 1200px) {
+  :root{
+    --cont-width: 960px;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+  :root{
+    --cont-width: 720px;
+  }
+  
+  #home .cont {
+    flex-direction: column;
+  }
+  
+  #home .cont .content {
+    width: 100%;
+  }
+  
+  #home .cont .content h1 {
+    font-size: 38px;
+    text-align: center;
+  }
+  
+  #home .cont .content p {
+    font-size: 16px;
+    text-align: center;
+  }
+  #home .cont .content ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  #home .cont .content ul li {
+    flex-wrap: nowrap;
+  }
+  
+  #home .cont .content a {
+    align-self: center;
+  }
+  #home .cont .image {
+    width: 100%;
+  }
+
+
+
+
+  #about .cont > .content {
+    flex-direction: column-reverse;
+  }
+  
+  #about .cont .content .left {
+    align-items: center;
+  }
+  #about .cont .content .right {
+    height: 100%;
+    width: 100%;
+  }
+  
+  #about .cont .content .right .about-logo img {
+    max-height: 200px;
+    transition: var(--transition-slow-1);
+  }
+
+  #about .cont .content .left p {
+    text-align: center;
+  }
+  
+  #why-join .cont .content .whyjoincard {
+    width: calc(100% / 2 - 10px);
+    min-height: 300px;
+  }
+  
+  #speakers .cont .content .speaker {
+    width: calc(100% / 2 - 10px);
+
+  }
+  
+  
+}
+
+
+@media screen and (max-width: 768px) {
+  :root{
+    --cont-width: 540px;
+  }
+
+  #why-join .cont .content .whyjoincard {
+    width: 100%;
+  }
+
+  #speakers .cont .content .speaker {
+    width: 100%;
+
+  }
+
+  #schedule .cont .content .shedule-table-container table tbody tr td.titile .title-cont .icon, #schedule .cont .content .shedule-table-container table thead tr th.title .title-cont .icon{
+    /* position: absolute;
+    left: 10px; */
+    display: flex;
+  
+  }
+  #schedule .cont .content .shedule-table-container table tbody tr td.titile .title-cont span, #schedule .cont .content .shedule-table-container table thead tr th.title .title-cont h3{
+    display: none;
+  
+  }
+
+  #schedule .cont .content .shedule-table-container table colgroup col.title{
+    max-width: 10%;
+    width: 100%;
+  }
+  #schedule .cont .content .shedule-table-container table colgroup col.day1{
+    max-width: 45%;
+    width: 100%;
+  }
+  #schedule .cont .content .shedule-table-container table colgroup col.day2{
+    max-width: 45%;
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  :root{
+    --cont-width: 540px;
+  }
+}
+
