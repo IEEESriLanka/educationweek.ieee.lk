@@ -671,6 +671,15 @@ section .cont .organizers .content .organizer .name {
 /* Shedules */
 
 #schedule{
+  padding-top: 70px;
+  padding-bottom: 50px;
+  background: var(--dark-gray);
+  /* background-attachment: fixed;
+  background-size: cover;
+  background-position: center; */
+}
+#schedule .cont h2{
+  color: var(--white-color);
 
 }
 #schedule .cont .content{
@@ -678,7 +687,66 @@ section .cont .organizers .content .organizer .name {
   justify-content: center;
 
 }
-#schedule .cont .content .shedule-table-container{
+#schedule .cont .content .load-btns{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+
+#schedule .cont .content .load-btns button{
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  font-size: 20px;
+  font-weight: 500;
+  transition: var(--transition);
+  border: none;
+  padding: 10px 0;
+  width: 50%;
+  cursor: pointer;
+}
+#schedule .cont .content .load-btns button.active{
+  background-color: var(--primary-color);
+}
+
+#schedule .cont .content .load-btns button:hover{
+  background-color: var(--primary-color);
+}
+#schedule .cont .content .schedule-cont{
+  /* background: var(--bg-gradient); */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#schedule .cont .content .schedule-cont .day{
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding-top: 20px;
+  transition: var(--transition);
+}
+#schedule .cont .content .schedule-cont .day.active{
+  display: flex;
+}
+
+#schedule .cont .content .schedule-cont .day .schedule{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-gradient);
+  padding: 20px;
+  border-radius: var(--border-radius-30);
+  box-shadow: var(--box-shadow);
+}
+
+#schedule .cont .content .schedule-cont .day .schedule .time h3, #schedule .cont .content .schedule-cont .day .schedule .event p, #schedule .cont .content .schedule-cont .day .schedule .event h3{
+  color: var(--primary-color);
+}
+
+/* #schedule .cont .content .shedule-table-container{
   display: flex;
   width: 100%;
   align-items: center ;
@@ -727,8 +795,8 @@ section .cont .organizers .content .organizer .name {
   
 }
 #schedule .cont .content .shedule-table-container table tbody tr td.titile .title-cont .icon, #schedule .cont .content .shedule-table-container table thead tr th.title .title-cont .icon{
-  /* position: absolute;
-  left: 10px; */
+  position: absolute;
+  left: 10px;
   display: none;
   align-items: center;
   justify-content: center;
@@ -749,20 +817,20 @@ section .cont .organizers .content .organizer .name {
   color: var(--primary-color);
 
 }
-/* #schedule .cont .content .shedule-table-container table tbody tr:nth-child(even) td.titile{
+#schedule .cont .content .shedule-table-container table tbody tr:nth-child(even) td.titile{
   font-weight: 600;
   background-color: #697;
   color: var(--white-color);
 
-} */
-/* #schedule .cont .content .shedule-table-container table tbody tr:nth-child(odd){
+}
+#schedule .cont .content .shedule-table-container table tbody tr:nth-child(odd){
   background-color: #e8f3ff;
 
 }
 #schedule .cont .content .shedule-table-container table tbody tr:nth-child(even){
   background-color: #eaffea;
 
-} */
+}
 #schedule .cont .content .shedule-table-container table tbody tr{
 background: var(--bg-gradient);
 }
@@ -816,7 +884,7 @@ background: var(--bg-gradient);
 }
 #schedule .cont .content .shedule-table-container table tbody tr td:nth-child(3), #schedule .cont .content .shedule-table-container table tbody tr td:nth-child(3) sup, #schedule .cont .content .shedule-table-container table tbody tr td:nth-child(3) div span{
   color: #ED2938;
-}
+} */
 
 
 
