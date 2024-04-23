@@ -12,4 +12,5 @@
 - 10+ Speakers
 - TRACE Expert City, Colombo
 - Free Entrance
-<h3> - [Learn More](https://educationweek.ieee.lk/#about) </h3>
+  
+[Learn More](https://educationweek.ieee.lk/#about)
