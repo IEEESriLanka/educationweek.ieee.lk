@@ -141,15 +141,43 @@ header nav .right a:hover {
   color: var(--primary-color);
 }
 
+header nav .right a .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--bg-color);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-30);
+  padding: 10px;
+  z-index: 1000;
+}
+
+header nav .right a .dropdown a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+header nav .right a .dropdown a:hover {
+  color: var(--primary-color);
+}
+
+header nav .right a:hover .dropdown {
+  display: block;
+}
 
 /* Hamburger */
-.hamburger{
+.hamburger {
   display: none;
   cursor: pointer;
   z-index: 1000;
 }
-.bar{
-  display:block;
+.bar {
+  display: block;
   width: 25px;
   height: 3px;
   margin: 5px auto;
@@ -157,10 +185,7 @@ header nav .right a:hover {
   transition: all 0.3s ease-in-out;
   background-color: var(--primary-color);
   border-radius: 2px;
-  
 }
-
-
 
 /* Back to Top */
 
@@ -609,7 +634,6 @@ section .cont .organizers .content .organizer .name {
   object-fit: cover;
 }
 
-
 #speakers .cont .content .speaker .image img {
   width: 100%;
   height: 100%;
@@ -670,7 +694,7 @@ section .cont .organizers .content .organizer .name {
 
 /* Shedules */
 
-#schedule{
+#schedule {
   padding-top: 70px;
   padding-bottom: 50px;
   background: var(--dark-gray);
@@ -678,16 +702,14 @@ section .cont .organizers .content .organizer .name {
   background-size: cover;
   background-position: center; */
 }
-#schedule .cont h2{
+#schedule .cont h2 {
   color: var(--white-color);
-
 }
-#schedule .cont .content{
-  align-items: center ;
+#schedule .cont .content {
+  align-items: center;
   justify-content: center;
-
 }
-#schedule .cont .content .load-btns{
+#schedule .cont .content .load-btns {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -695,7 +717,7 @@ section .cont .organizers .content .organizer .name {
   max-width: 500px;
 }
 
-#schedule .cont .content .load-btns button{
+#schedule .cont .content .load-btns button {
   background-color: var(--dark-color);
   color: var(--white-color);
   font-size: 20px;
@@ -706,21 +728,21 @@ section .cont .organizers .content .organizer .name {
   width: 50%;
   cursor: pointer;
 }
-#schedule .cont .content .load-btns button.active{
+#schedule .cont .content .load-btns button.active {
   background-color: var(--primary-color);
 }
 
-#schedule .cont .content .load-btns button:hover{
+#schedule .cont .content .load-btns button:hover {
   background-color: var(--primary-color);
 }
-#schedule .cont .content .schedule-cont{
+#schedule .cont .content .schedule-cont {
   /* background: var(--bg-gradient); */
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#schedule .cont .content .schedule-cont .day{
+#schedule .cont .content .schedule-cont .day {
   display: none;
   flex-direction: column;
   gap: 20px;
@@ -728,11 +750,11 @@ section .cont .organizers .content .organizer .name {
   padding-top: 20px;
   transition: var(--transition);
 }
-#schedule .cont .content .schedule-cont .day.active{
+#schedule .cont .content .schedule-cont .day.active {
   display: flex;
 }
 
-#schedule .cont .content .schedule-cont .day .schedule{
+#schedule .cont .content .schedule-cont .day .schedule {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -742,10 +764,11 @@ section .cont .organizers .content .organizer .name {
   box-shadow: var(--box-shadow);
 }
 
-#schedule .cont .content .schedule-cont .day .schedule .time h3, #schedule .cont .content .schedule-cont .day .schedule .event p, #schedule .cont .content .schedule-cont .day .schedule .event h3{
+#schedule .cont .content .schedule-cont .day .schedule .time h3,
+#schedule .cont .content .schedule-cont .day .schedule .event p,
+#schedule .cont .content .schedule-cont .day .schedule .event h3 {
   color: var(--primary-color);
 }
-
 
 /* ============================== */
 /* 
@@ -930,13 +953,11 @@ background: var(--bg-gradient);
   color: #ED2938;
 } */
 
-
 /* Contact Section */
 #contact .cont .content {
   gap: 20px;
-
 }
-#contact .cont .content .contsct-cont{
+#contact .cont .content .contsct-cont {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -965,7 +986,6 @@ background: var(--bg-gradient);
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 #contact .cont .content .contsct-cont .contact-card .details h3 {
@@ -976,7 +996,7 @@ background: var(--bg-gradient);
   width: 100%;
 }
 
-#contact .cont .content .contsct-cont .contact-card .details p{
+#contact .cont .content .contsct-cont .contact-card .details p {
   font-size: 16px;
   font-weight: 500;
   color: var(--dark-color);
@@ -984,7 +1004,7 @@ background: var(--bg-gradient);
   width: 100%;
   padding-bottom: 5px;
 }
-#contact .cont .content .contsct-cont .contact-card .details p a{
+#contact .cont .content .contsct-cont .contact-card .details p a {
   font-size: 14px;
   font-weight: 400;
   color: var(--dark-color);
@@ -1058,23 +1078,21 @@ footer .cont .content .left p {
 /* Responsive */
 
 @media screen and (max-width: 1400px) {
-  :root{
+  :root {
     --cont-width: 1140px;
   }
-
 }
 @media screen and (max-width: 1200px) {
-  :root{
+  :root {
     --cont-width: 960px;
   }
-
 }
 
 @media screen and (max-width: 992px) {
-  :root{
+  :root {
     --cont-width: 720px;
   }
-  header{
+  header {
     position: sticky;
     top: 0;
     background: var(--bg-color);
@@ -1112,32 +1130,32 @@ footer .cont .content .left p {
     border-bottom: none;
   }
 
-  .hamburger{
+  .hamburger {
     display: block;
   }
-  header nav.active .hamburger .bar:nth-child(2){
-      opacity: 0;
+  header nav.active .hamburger .bar:nth-child(2) {
+    opacity: 0;
   }
-  header nav.active .hamburger .bar:nth-child(1){
-      transform: translateY(8px) rotate(45deg);
+  header nav.active .hamburger .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
   }
-  header nav.active .hamburger .bar:nth-child(3){
-      transform: translateY(-8px) rotate(-45deg);
+  header nav.active .hamburger .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 
   #home .cont {
     flex-direction: column;
   }
-  
+
   #home .cont .content {
     width: 100%;
   }
-  
+
   #home .cont .content h1 {
     font-size: 38px;
     text-align: center;
   }
-  
+
   #home .cont .content p {
     font-size: 16px;
     text-align: center;
@@ -1149,11 +1167,11 @@ footer .cont .content .left p {
     width: 100%;
     flex-wrap: wrap;
   }
-  
+
   #home .cont .content ul li {
     flex-wrap: nowrap;
   }
-  
+
   #home .cont .content a {
     align-self: center;
   }
@@ -1161,13 +1179,10 @@ footer .cont .content .left p {
     width: 100%;
   }
 
-
-
-
   #about .cont > .content {
     flex-direction: column-reverse;
   }
-  
+
   #about .cont .content .left {
     align-items: center;
   }
@@ -1175,7 +1190,7 @@ footer .cont .content .left p {
     height: 100%;
     width: 100%;
   }
-  
+
   #about .cont .content .right .about-logo img {
     max-height: 200px;
     transition: var(--transition-slow-1);
@@ -1184,53 +1199,49 @@ footer .cont .content .left p {
   #about .cont .content .left p {
     text-align: center;
   }
-  
+
   #why-join .cont .content .whyjoincard {
     width: calc(100% / 2 - 10px);
     min-height: 300px;
   }
-  
+
   #speakers .cont .content .speaker {
     width: calc(100% / 2 - 10px);
-
   }
-  
-  
-footer .cont .content {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-footer .cont .content .left,
-footer .cont .content .right {
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-footer .cont .content .left p,
-footer .cont .content .right p{
-  text-align: center;
-}
+  footer .cont .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
+  footer .cont .content .left,
+  footer .cont .content .right {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  footer .cont .content .left p,
+  footer .cont .content .right p {
+    text-align: center;
+  }
 }
-#sec404{
+#sec404 {
   padding-top: 20px;
 }
 #sec404 .cont {
   padding: 0;
   padding-top: 0;
 }
-#sec404 .cont .content{
+#sec404 .cont .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
   padding: 0;
-
 }
-#sec404 .cont .content h1{
+#sec404 .cont .content h1 {
   font-size: 100px;
   color: var(--primary-color);
   font-weight: 700;
@@ -1238,29 +1249,27 @@ footer .cont .content .right p{
   text-align: center;
 }
 
-#sec404 .cont .content p{
+#sec404 .cont .content p {
   font-size: 20px;
   color: var(--dark-color);
   font-weight: 500;
   text-align: center;
 }
 
-#sec404 .cont .content .image404{
+#sec404 .cont .content .image404 {
   max-height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 20px;
-
 }
-#sec404 .cont .content .image404 img{
+#sec404 .cont .content .image404 img {
   max-height: 300px;
   width: 100%;
-
 }
 
-#sec404 .cont .content a{
+#sec404 .cont .content a {
   padding: 10px 20px;
   background-color: var(--primary-color);
   color: var(--white-color);
@@ -1271,7 +1280,7 @@ footer .cont .content .right p{
 }
 
 @media screen and (max-width: 768px) {
-  :root{
+  :root {
     --cont-width: 540px;
   }
 
@@ -1281,143 +1290,177 @@ footer .cont .content .right p{
 
   #speakers .cont .content .speaker {
     width: 100%;
-
   }
 
-  #schedule .cont .content .shedule-table-container table tbody tr td.titile .title-cont .icon, #schedule .cont .content .shedule-table-container table thead tr th.title .title-cont .icon{
+  #schedule
+    .cont
+    .content
+    .shedule-table-container
+    table
+    tbody
+    tr
+    td.titile
+    .title-cont
+    .icon,
+  #schedule
+    .cont
+    .content
+    .shedule-table-container
+    table
+    thead
+    tr
+    th.title
+    .title-cont
+    .icon {
     /* position: absolute;
     left: 10px; */
     display: flex;
-  
   }
-  #schedule .cont .content .shedule-table-container table tbody tr td.titile .title-cont span, #schedule .cont .content .shedule-table-container table thead tr th.title .title-cont h3{
+  #schedule
+    .cont
+    .content
+    .shedule-table-container
+    table
+    tbody
+    tr
+    td.titile
+    .title-cont
+    span,
+  #schedule
+    .cont
+    .content
+    .shedule-table-container
+    table
+    thead
+    tr
+    th.title
+    .title-cont
+    h3 {
     display: none;
-  
   }
 
-  #schedule .cont .content .shedule-table-container table colgroup col.title{
+  #schedule .cont .content .shedule-table-container table colgroup col.title {
     max-width: 10%;
     width: 100%;
   }
-  #schedule .cont .content .shedule-table-container table colgroup col.day1{
+  #schedule .cont .content .shedule-table-container table colgroup col.day1 {
     max-width: 45%;
     width: 100%;
   }
-  #schedule .cont .content .shedule-table-container table colgroup col.day2{
+  #schedule .cont .content .shedule-table-container table colgroup col.day2 {
     max-width: 45%;
     width: 100%;
   }
   /* Contact Section */
-#contact .cont .content .contsct-cont{
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: 20px;
-}
+  #contact .cont .content .contsct-cont {
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
 
-#contact .cont .content .contsct-cont .contact-card {
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
+  #contact .cont .content .contsct-cont .contact-card {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
-}
-
 
 @media screen and (max-width: 576px) {
-  :root{
+  :root {
     --cont-width: 100%;
   }
 
-  section{
+  section {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  header{
+  header {
     padding: 10px 20px;
   }
   #home .cont .content h1 {
     font-size: 28px;
   }
-  
+
   #home .cont .content p {
     font-size: 14px;
   }
-  
+
   #home .cont .content ul li {
     font-size: 12px;
   }
-  
+
   #home .cont .content a {
     font-size: 16px;
   }
-  
+
   #home .cont .image img {
     max-height: 400px;
   }
-  
+
   #about .cont .content .right .about-logo img {
     max-height: 150px;
   }
-  
+
   #about .cont .content .left p {
     font-size: 14px;
   }
-  
+
   #why-join .cont .content .whyjoincard {
     width: 100%;
   }
-  
+
   #why-join .cont .content .whyjoincard .icon {
     width: 80px;
     height: 80px;
   }
-  
+
   #why-join .cont .content .whyjoincard .details h3 {
     font-size: 18px;
   }
-  
+
   #why-join .cont .content .whyjoincard .details p {
     font-size: 12px;
   }
-  
+
   #speakers .cont .content .speaker {
     width: 100%;
   }
-  
+
   #speakers .cont .content .speaker .image {
     width: 150px;
     height: 150px;
   }
-  
+
   #speakers .cont .content .speaker .image img {
     width: 100%;
     height: 100%;
   }
-  
+
   #speakers .cont .content .speaker .details h3 {
     font-size: 18px;
   }
-  
+
   #speakers .cont .content .speaker .details p {
     font-size: 12px;
   }
-  
+
   #speakers .cont .content .speaker .details span {
     font-size: 12px;
   }
-  
-  #schedule .cont .content .shedule-table-container table colgroup col.title{
+
+  #schedule .cont .content .shedule-table-container table colgroup col.title {
     max-width: 15%;
     width: 100%;
   }
-  #schedule .cont .content .shedule-table-container table colgroup col.day1{
+  #schedule .cont .content .shedule-table-container table colgroup col.day1 {
     max-width: 42%;
     width: 100%;
   }
 }
 
-@media screen and (max-width: 380px){
-  section{
+@media screen and (max-width: 380px) {
+  section {
     padding-left: 10px;
     padding-right: 10px;
   }
