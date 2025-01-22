@@ -428,6 +428,23 @@ section .overlay {
   transform: scale(1.05);
 }
 
+section .cont .intro-video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .cont .intro-video video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  
+}
+
+
+
 section .cont .organizers {
   padding-top: 30px;
   display: flex;
