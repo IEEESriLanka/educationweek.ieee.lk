@@ -692,18 +692,24 @@ section .cont .organizers .content .organizer .name {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 500px;
+  max-width: 2000px;
 }
 
-#schedule .cont .content .load-btns button{
+#schedule .cont .content .load-btns button {
   background-color: var(--dark-color);
   color: var(--white-color);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   transition: var(--transition);
   border: none;
-  padding: 10px 0;
-  width: 50%;
+  padding: 15px 20px; /* more padding = longer button */
+  min-width: 500px; /* or auto/fit-content if you want it just as long as the text */
+  text-align: center;
+  white-space: normal; /* allows multi-line text */
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 #schedule .cont .content .load-btns button.active{
