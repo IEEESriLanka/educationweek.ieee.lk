@@ -1430,10 +1430,10 @@ footer .cont .content .right p{
   }
 }
 
-@media screen and (max-width: 380px){
-  section{
-    padding-left: 10px;
-    padding-right: 10px;
+@media screen and (max-width: 768px) {
+  .organizers .content .organizer {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
   }
 }
-
