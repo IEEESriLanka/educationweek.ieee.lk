@@ -1,4 +1,4 @@
-var countDownDate = new Date("Apr 6, 2025 00:00:00").getTime();
+var countDownDate = new Date("Apr 7, 2025 09:00:00").getTime();
 var x = setInterval(function() {
     var now = new Date().getTime();
     var distance = countDownDate - now;

@@ -1,47 +1,49 @@
-var backToTop = document.querySelector('#back-to-top');
-var scrollPosition = window.scrollY;
+// Back to Top Button
+const backToTop = document.querySelector('#back-to-top');
 
-window.addEventListener('scroll', function() {
-    scrollPosition = window.scrollY;
-    if (scrollPosition > 300) {
-        backToTop.classList.remove('hidden');
-    } else {
-        backToTop.classList.add('hidden');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTop.classList.remove('hidden');
+  } else {
+    backToTop.classList.add('hidden');
+  }
+});
+
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' }); // Fixed 'behavior' value
+});
+
+// Hamburger Menu
+const hamburger = document.querySelector('#hamburger');
+const nav = document.querySelector('nav');
+
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+
+// Lazy Loading
+$(function () {
+  $('img.lazy').lazyload();
+});
+
+// Dynamic Tab Switching for Days
+const dayButtons = document.querySelectorAll('.load-btns .btn');
+const dayContents = document.querySelectorAll('.schedule-cont .day');
+
+dayButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    // Remove 'active' class from all buttons and content
+    dayButtons.forEach((b) => b.classList.remove('active'));
+    dayContents.forEach((day) => day.classList.remove('active'));
+
+    // Add 'active' to clicked button
+    btn.classList.add('active');
+
+    // Show corresponding content by data-day
+    const dayNumber = btn.getAttribute('data-day');
+    const activeDay = document.getElementById(`day${dayNumber}cont`);
+    if (activeDay) {
+      activeDay.classList.add('active');
     }
-});
-
-backToTop.addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'hidden' });
-});
-
-// Hamberger Menu
-var hamburger = document.querySelector('#hamburger');
-var nav = document.querySelector('nav');
-
-hamburger.addEventListener('click', function() {
-    nav.classList.toggle('active');
-});
-
-$(function() {
-    $('img.lazy').lazyload();
-});
-
-var btnday1 = document.getElementById('btnday1');
-var btnday2 = document.getElementById('btnday2');
-
-var day1cont = document.getElementById('day1cont');
-var day2cont = document.getElementById('day2cont');
-
-btnday1.addEventListener('click', function() {
-    day1cont.classList.add('active');
-    day2cont.classList.remove('active');
-    btnday1.classList.add('active');
-    btnday2.classList.remove('active');
-});
-
-btnday2.addEventListener('click', function() {
-    day2cont.classList.add('active');
-    day1cont.classList.remove('active');
-    btnday2.classList.add('active');
-    btnday1.classList.remove('active');
+  });
 });

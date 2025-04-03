@@ -687,12 +687,10 @@ section .cont .organizers .content .organizer .name {
   justify-content: center;
 
 }
-#schedule .cont .content .load-btns{
-  width: 100%;
+#schedule .cont .content .load-btns {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 2000px;
+  flex-wrap: wrap; /* allows stacking on smaller screens */
+  gap: 10px;
 }
 
 #schedule .cont .content .load-btns button {
@@ -702,16 +700,19 @@ section .cont .organizers .content .organizer .name {
   font-weight: 500;
   transition: var(--transition);
   border: none;
-  padding: 15px 20px; /* more padding = longer button */
-  min-width: 500px; /* or auto/fit-content if you want it just as long as the text */
+  padding: 15px 20px;
+  flex: 1 1 33.33%; /* 3 equal buttons */
+  min-height: 80px; /* ensures consistent height */
   text-align: center;
-  white-space: normal; /* allows multi-line text */
+  white-space: normal;
   line-height: 1.4;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  box-sizing: border-box;
 }
+
 #schedule .cont .content .load-btns button.active{
   background-color: var(--primary-color);
 }
@@ -1075,6 +1076,13 @@ footer .cont .content .left p {
   }
 
 }
+
+@media (max-width: 768px) {
+  #schedule .cont .content .load-btns button {
+    flex: 1 1 100%;
+  }
+}
+
 
 @media screen and (max-width: 992px) {
   :root{
