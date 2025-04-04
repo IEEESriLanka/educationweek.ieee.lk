@@ -472,40 +472,50 @@ section .cont .organizers .content .organizer .name {
 #why-join {
   padding-top: 70px;
   padding-bottom: 30px;
-  background-image: url("../img/bg1.webp");
+  background: url("../img/bg1.webp") no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 #why-join .overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   background-color: #4659;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  z-index: 0;
+}
+
+#why-join .cont {
+  position: relative;
+  z-index: 1;
+  max-width: var(--cont-width);
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 #why-join .cont h2 {
   color: var(--white-color);
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 #why-join .cont .content {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
   align-items: stretch;
-  gap: 20px;
-  flex-wrap: wrap;
   width: 100%;
-  max-width: var(--cont-width);
-  height: 100%;
 }
 
 #why-join .cont .content .whyjoincard {
-  width: calc(100% / 3 - 40px / 3);
+  width: calc(33.333% - 20px);
   background: var(--bg-gradient);
-  /* border: 1px solid var(--white-color); */
-  /* background-color: #01704b66; */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: var(--border-radius-30);
@@ -517,6 +527,12 @@ section .cont .organizers .content .organizer .name {
   align-items: center;
   gap: 10px;
   min-height: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#why-join .cont .content .whyjoincard:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.4), 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 #why-join .cont .content .whyjoincard .icon {
@@ -529,10 +545,14 @@ section .cont .organizers .content .organizer .name {
   background-color: var(--primary-color);
 }
 
-#why-join .cont .content .whyjoincard .icon svg {
-  width: 50px;
-  height: 50px;
-  fill: var(--white-color);
+#why-join .cont .content .whyjoincard .icon i {
+  font-size: 2.5rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+#why-join .cont .content .whyjoincard:hover .icon i {
+  transform: scale(1.2);
 }
 
 #why-join .cont .content .whyjoincard .details {
@@ -547,6 +567,7 @@ section .cont .organizers .content .organizer .name {
   font-weight: 600;
   color: var(--dark-color);
   text-align: center;
+  margin-bottom: 8px; /* spacing between title and paragraph */
 }
 
 #why-join .cont .content .whyjoincard .details p {
@@ -554,7 +575,22 @@ section .cont .organizers .content .organizer .name {
   font-weight: 300;
   color: var(--primary-color);
   text-align: center;
+  line-height: 1.5;
 }
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  #why-join .cont .content .whyjoincard {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  #why-join .cont .content .whyjoincard {
+    width: 100%;
+  }
+}
+
 
 /* Speakers */
 
