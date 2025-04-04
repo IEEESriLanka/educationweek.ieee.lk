@@ -535,6 +535,19 @@ section .cont .organizers .content .organizer .name {
   box-shadow: 0 0 20px rgba(0, 255, 157, 0.4), 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
+
+  #why-join .whyjoincard .icon svg {
+    width: 48px;
+    height: 48px;
+    stroke-width: 1.5;
+    stroke: white;
+  }
+
+  #why-join .whyjoincard h3 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
 #why-join .cont .content .whyjoincard .icon {
   width: 100px;
   height: 100px;
@@ -1472,4 +1485,28 @@ footer .cont .content .right p{
     max-width: 300px;
     margin: 0 auto;
   }
+}
+
+
+/* ========== CUSTOM IMPROVEMENTS ========== */
+
+/* Add spacing under speaker names */
+#speakers .cont .content .speaker .details h3 {
+  margin-bottom: 10px;
+}
+
+/* Improve line spacing in speaker descriptions */
+#speakers .cont .content .speaker .details p {
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+/* Improve spacing between title and description in Why Join Us cards */
+#why-join .cont .content .whyjoincard .details h3 {
+  margin-bottom: 12px;
+}
+
+/* Improve readability of paragraph text in Why Join Us */
+#why-join .cont .content .whyjoincard .details p {
+  line-height: 1.6;
 }
