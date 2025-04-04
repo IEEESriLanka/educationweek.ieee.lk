@@ -1487,6 +1487,18 @@ footer .cont .content .right p{
   }
 }
 
+@media screen and (max-width: 768px) {
+  #speakers .cont .content {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+  }
+
+  #speakers .cont .content .speaker {
+    width: 100% !important;
+  }
+}
+
+
 
 /* ========== CUSTOM IMPROVEMENTS ========== */
 
@@ -1510,3 +1522,5 @@ footer .cont .content .right p{
 #why-join .cont .content .whyjoincard .details p {
   line-height: 1.6;
 }
+
+
