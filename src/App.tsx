@@ -9,6 +9,8 @@ import Partners from './components/Partners';
 import Contact  from './components/Contact';
 import Footer   from './components/Footer';
 
+export const eventDate = new Date('2026-04-23T08:00:00+05:30');
+
 export default function App() {
   return (
     <div style={{ minHeight:'100vh', background:'#05100a', position:'relative' }}>

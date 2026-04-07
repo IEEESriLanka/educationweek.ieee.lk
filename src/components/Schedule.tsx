@@ -2,6 +2,7 @@ import { useState,useEffect,useRef } from 'react';
 import { Clock,Mic,Users,Presentation,Network,Coffee } from 'lucide-react';
 import { SCHEDULE_SESSIONS } from '../data';
 import type { ScheduleTrack,ScheduleSession,SectionProps } from '../types';
+import { eventDate } from '@/App';
 
 const TRACKS:{id:ScheduleTrack;label:string}[]=[
   {id:'school',label:'School & Teachers'},
@@ -33,7 +34,7 @@ export default function Schedule({id}:SectionProps){
         <div className="rv" style={{marginBottom:48}}>
           <span className="eyebrow">Programme</span>
           <h2 className="t-h1" style={{marginTop:8}}>Event Schedule</h2>
-          <p style={{marginTop:10,fontSize:14,color:'rgba(255,255,255,0.35)'}}>07 April 2025 · TRACE Expert City, Colombo 10</p>
+          <p style={{marginTop:10,fontSize:14,color:'rgba(255,255,255,0.35)'}}>{eventDate.getDate()} {eventDate.toLocaleString('default', { month: 'long' })} {eventDate.getFullYear()} · TRACE Expert City, Colombo 10</p>
         </div>
 
         {/* Tabs */}

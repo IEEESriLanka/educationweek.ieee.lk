@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight, MapPin, Calendar, Ticket, ExternalLink, Users } from 'lucide-react';
 import Countdown from './Countdown';
+import { eventDate } from '@/App';
 
-const eventDate = new Date('2026-04-23T08:00:00+05:30').getTime();
 
 interface TL { days:number; hours:number; minutes:number; seconds:number; }
-const getT=():TL=>{ const d=Math.max(eventDate-Date.now(),0); return {days:Math.floor(d/86400000),hours:Math.floor(d%86400000/3600000),minutes:Math.floor(d%3600000/60000),seconds:Math.floor(d%60000/1000)}; };
+const getT=():TL=>{ const d=Math.max(eventDate.getTime()-Date.now(),0); return {days:Math.floor(d/86400000),hours:Math.floor(d%86400000/3600000),minutes:Math.floor(d%3600000/60000),seconds:Math.floor(d%60000/1000)}; };
 
 export default function Hero() {
   const [t,setT]=useState<TL>(getT());
@@ -21,7 +21,7 @@ export default function Hero() {
         <div style={{display:'flex',justifyContent:'center',marginBottom:28}}>
           <span className={`eyebrow rv${in_?' on':''}`}>
             <span className="live-dot"/>
-            IEEE Sri Lanka Section · 07 April 2025
+            IEEE Sri Lanka Section · {eventDate.getDate()} {eventDate.toLocaleString('default',{month:'long'})} {eventDate.getFullYear()}
           </span>
         </div>
 
@@ -29,7 +29,7 @@ export default function Hero() {
         <h1 className={`t-display rv d1${in_?' on':''}`} style={{textAlign:'center',maxWidth:800,margin:'0 auto 20px'}}>
           IEEE Education Week{' '}
           <span className="t-grad">Sri Lanka</span>
-          <br/>— 2025
+          <br/>{eventDate.getFullYear()}
         </h1>
 
         <p className={`rv d2${in_?' on':''}`} style={{textAlign:'center',fontSize:'clamp(15px,1.8vw,18px)',color:'rgba(255,255,255,0.50)',maxWidth:520,margin:'0 auto 40px',lineHeight:1.75,fontWeight:400}}>
@@ -53,7 +53,7 @@ export default function Hero() {
             <div>
               <div className="t-label" style={{marginBottom:10}}>Event Details</div>
               <div style={{fontWeight:800,fontSize:'clamp(22px,3.5vw,36px)',letterSpacing:'-0.03em',lineHeight:1.1,color:'rgba(255,255,255,0.92)'}}>
-                07<sup style={{fontSize:12,verticalAlign:'super'}}>th</sup> April 2025
+                {eventDate.getDate()}<sup style={{fontSize:12,verticalAlign:'super'}}>th</sup> {eventDate.toLocaleString('default',{month:'long'})} {eventDate.getFullYear()}
                 <span style={{display:'block',fontWeight:500,fontSize:'clamp(14px,1.8vw,17px)',color:'rgba(255,255,255,0.45)',marginTop:5}}>TRACE Expert City, Colombo 10</span>
               </div>
             </div>
@@ -78,9 +78,9 @@ export default function Hero() {
         {/* Stat tiles */}
         <div className="stat-row" style={{marginTop:12,maxWidth:'100%'}}>
           {[
-            {v:'07 Apr',label:'Event Date',    sub:'2025'},
-            {v:'Free',  label:'Entrance',       sub:'No registration fee'},
-            {v:'10+',   label:'Expert Speakers',sub:'Industry & academia'},
+            {v:`${eventDate.getDate()} ${eventDate.toLocaleString('default', { month: 'short' })}`, label:'Event Date', sub: eventDate.getFullYear()},
+            {v:'Free', label:'Entrance', sub:'No registration fee'},
+            {v:'10+', label:'Expert Speakers', sub:'Industry & academia'},
           ].map(s=>(
             <div key={s.label} className="glass glass-hover" style={{padding:'clamp(16px,2.5vw,24px) clamp(16px,2.5vw,28px)',borderRadius:'var(--r2)'}}>
               <div style={{fontWeight:800,fontSize:'clamp(20px,3vw,34px)',color:'rgba(255,255,255,0.88)',letterSpacing:'-0.03em',lineHeight:1}}>{s.v}</div>

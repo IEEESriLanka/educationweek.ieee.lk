@@ -2,6 +2,7 @@ import { useEffect,useRef } from 'react';
 import { Phone,Mail,MapPin,ArrowRight,ExternalLink,Clock } from 'lucide-react';
 import { CONTACTS } from '../data';
 import type { ContactPerson,SectionProps } from '../types';
+import { eventDate } from '@/App';
 
 export default function Contact({id}:SectionProps){
   const ref=useRef<HTMLElement>(null);
@@ -18,7 +19,7 @@ export default function Contact({id}:SectionProps){
           <div>
             <div className="rv"><span className="eyebrow">Contact</span>
               <h2 className="t-h1" style={{marginTop:8,marginBottom:14}}>Ready to join us?</h2>
-              <p style={{fontSize:15,lineHeight:1.75,color:'rgba(255,255,255,0.45)',marginBottom:32}}>IEEE Education Week Sri Lanka 2025 is completely free. Reach out for any inquiries about registration, sponsorship, or partnerships.</p>
+              <p style={{fontSize:15,lineHeight:1.75,color:'rgba(255,255,255,0.45)',marginBottom:32}}>IEEE Education Week Sri Lanka {eventDate.getFullYear()} is completely free. Reach out for any inquiries about registration, sponsorship, or partnerships.</p>
             </div>
 
             {/* Venue card */}
@@ -28,8 +29,8 @@ export default function Contact({id}:SectionProps){
               <div style={{display:'flex',flexDirection:'column',gap:14}}>
                 {[
                   {icon:<MapPin size={14}/>,label:'Location',text:'TRACE Expert City, Colombo 10',c:'#4ade80'},
-                  {icon:<Clock size={14}/>,label:'Date & Time',text:'07 April 2025 · 9:00 AM onwards',c:'#93c5fd'},
-                  {icon:<Mail size={14}/>,label:'Entry',text:'Free — Open to all attendees',c:'#f9a8d4'},
+                  {icon:<Clock size={14}/>,label:'Date & Time',text:`${eventDate.getDate()} ${eventDate.toLocaleString('default', { month: 'long' })} ${eventDate.getFullYear()} · 8:00 AM onwards`,c:'#93c5fd'},
+                  {icon:<Mail size={14}/>,label:'Entry',text:'Free - Open to all attendees',c:'#f9a8d4'},
                 ].map(({icon,label,text,c})=>(
                   <div key={label} style={{display:'flex',alignItems:'flex-start',gap:12}}>
                     <div style={{width:30,height:30,borderRadius:8,background:`${c.replace(')',',0.12)').replace('rgb','rgba')}`,display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,color:c,border:`1px solid ${c.replace(')',',0.2)').replace('rgb','rgba')}`}}>{icon}</div>
