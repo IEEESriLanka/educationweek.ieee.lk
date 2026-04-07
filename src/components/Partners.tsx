@@ -3,12 +3,12 @@ import { PARTNERS } from '../data';
 import type { Partner,SectionProps } from '../types';
 
 type Tier=Partner['tier'];
-const ORDER:Tier[]=['title','ecosystem','ai-knowledge','industry','stem'];
+const ORDER:Tier[]=['title','ecosystem','colab','program','stem'];
 const CFG:Record<Tier,{label:string;dot:string;size:string;maxW:number}>={
   'title':        {label:'Title Partner',         dot:'#fde047',size:'19px',maxW:300},
   'ecosystem':    {label:'Ecosystem Partner',     dot:'#4ade80',size:'16px',maxW:260},
-  'ai-knowledge': {label:'AI Knowledge Partners', dot:'#c4b5fd',size:'14px',maxW:220},
-  'industry':     {label:'Industry Partners',     dot:'#93c5fd',size:'14px',maxW:190},
+  'colab':        {label:'In a Collaboration With',         dot:'#f472b6',size:'14px',maxW:190},
+  'program':      {label:'Program Partners',     dot:'#93c5fd',size:'14px',maxW:190},
   'stem':         {label:'STEM Partners',          dot:'#5eead4',size:'14px',maxW:190},
 };
 
@@ -40,9 +40,14 @@ export default function Partners({id}:SectionProps){
                 </div>
                 <div style={{display:'flex',flexWrap:'wrap',gap:10}}>
                   {items.map(p=>(
-                    <div key={p.id} className="partner-pill" style={{flex:`1 1 ${maxW*0.5}px`,maxWidth:maxW}}>
+                    <>
+                    <div key={p.id} className="partner-pill aria-hidden:hidden" aria-hidden={!!p.logoUrl} style={{flex:`1 1 ${maxW*0.5}px`,maxWidth:maxW}}>
                       <span style={{fontWeight:700,fontSize:size,color:'rgba(255,255,255,0.70)',textAlign:'center'}}>{p.name}</span>
                     </div>
+                    <div key={p.id+'-logo'} className="partner-logo aria-hidden:hidden" aria-hidden={!p.logoUrl} style={{flex:`1 1 ${maxW*0.5}px`,maxWidth:maxW}}>
+                      {p.logoUrl && <img src={"/assets/images/partners/"+p.logoUrl} className='' alt={p.name} style={{maxWidth:'100%',maxHeight:40,objectFit:'contain',opacity:0.95}}/>}
+                    </div>
+                    </>
                   ))}
                 </div>
               </div>
