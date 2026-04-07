@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IEEE Education Week Sri Lanka 2025</title>
+  <script>
+    // GitHub Pages SPA redirect fix.
+    // When GitHub Pages gets a 404 on a sub-path, it serves this file.
+    // We redirect back to index.html with the path encoded as a query param,
+    // then the main app picks it up and handles routing.
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + 1).join('/') +
+      '/?p=/' + l.pathname.slice(1).split('/').slice(1).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body>Redirecting...</body>
+</html>
