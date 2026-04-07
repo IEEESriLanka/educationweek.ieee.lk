@@ -109,7 +109,7 @@ export default function Navbar() {
 
           {/* CTA + hamburger */}
           <div style={{display:'flex',alignItems:'center',gap:10}}>
-            <button onClick={()=>go('#contact')} className="btn btn-primary btn-sm hidden lg:inline-flex">Register Free</button>
+            <button onClick={()=>go('#contact')} className="btn btn-primary btn-sm hidden lg:inline-flex">Register Now</button>
             <button onClick={()=>setOpen(v=>!v)} className="flex md:hidden" style={{
               width:36,height:36,borderRadius:9,
               background:open?'rgba(34,197,94,0.10)':'rgba(255,255,255,0.05)',

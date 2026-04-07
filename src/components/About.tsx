@@ -64,8 +64,10 @@ export default function About({id}:SectionProps){
             <div className="rv glass-green" style={{padding:'clamp(24px,3vw,36px)',borderRadius:'var(--r4)',textAlign:'center',position:'relative',overflow:'hidden'}}>
               <div style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',width:160,height:160,background:'radial-gradient(circle,rgba(34,197,94,0.15) 0%,transparent 70%)',pointerEvents:'none'}}/>
               <div style={{fontFamily:'JetBrains Mono,monospace',fontSize:10,fontWeight:600,color:'rgba(74,222,128,0.6)',letterSpacing:'0.2em',textTransform:'uppercase',marginBottom:10}}>IEEE</div>
-              <div style={{fontWeight:800,fontSize:'clamp(26px,3vw,36px)',letterSpacing:'-0.03em',lineHeight:1.1,color:'rgba(255,255,255,0.88)'}}>Education<br/>Week™</div>
-              <div style={{fontFamily:'JetBrains Mono,monospace',fontSize:10,color:'rgba(255,255,255,0.25)',marginTop:10,letterSpacing:'0.07em'}}>SRI LANKA · {eventDate.getFullYear()}</div>
+              <div className='flex flex-row justify-center items-center h-28'>
+                <img src="/assets/images/logo/edu-week-st-logo.png" alt="IEEE Logo" className='h-full' style={{filter:'brightness(0) invert(1)',marginBottom:-6}}/>
+              </div>
+              <div style={{fontFamily:'JetBrains Mono,monospace',fontSize:10,color:'rgba(255,255,255,0.25)',marginTop:10,letterSpacing:'0.07em'}}>SRI LANKA · </div>
             </div>
             {[{title:'Organized by',items:orgs,c:'#4ade80'},{title:'In Collaboration with',items:collab,c:'#93c5fd'},{title:'Supported by',items:supp,c:'#c4b5fd'}].map(({title,items,c},gi)=>(
               <div key={title} className={`rv glass d${gi+2}`} style={{padding:'18px 20px',borderRadius:'var(--r2)'}}>

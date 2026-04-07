@@ -1,5 +1,5 @@
 import { useEffect,useRef } from 'react';
-import { Phone,Mail,MapPin,ArrowRight,ExternalLink,Clock } from 'lucide-react';
+import { Phone,Mail,MapPin,ArrowRight,Clock, MousePointerClickIcon } from 'lucide-react';
 import { CONTACTS } from '../data';
 import type { ContactPerson,SectionProps } from '../types';
 import { eventDate } from '@/App';
@@ -44,8 +44,8 @@ export default function Contact({id}:SectionProps){
             </div>
 
             <div className="rv" style={{display:'flex',gap:12,flexWrap:'wrap'}}>
-              <a href="https://educationweek.ieee.lk" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{textDecoration:'none'}}>
-                Register on Official Site <ExternalLink size={14}/>
+              <a href="https://educationweek.ieee.lk" target="_blank" rel="noopener noreferrer" className="btn btn-primary animate-bounce" style={{textDecoration:'none'}}>
+                <MousePointerClickIcon size={14}/> Register on Form
               </a>
               <button onClick={()=>document.getElementById('speakers')?.scrollIntoView({behavior:'smooth'})} className="btn btn-glass">
                 Meet the Speakers <ArrowRight size={14}/>

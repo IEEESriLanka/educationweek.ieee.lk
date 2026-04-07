@@ -9,7 +9,7 @@ const CD = ({ v, l }: { v: number; l: string }) => (
 
 export default function Countdown({ time }: { time: TL }) {
     const go = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    
+
     return (
         <div className="glass" style={{ padding: 'clamp(22px,3vw,32px)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 24 }}>
             <div>
@@ -25,7 +25,7 @@ export default function Countdown({ time }: { time: TL }) {
                 <div className="cd-sep">:</div>
                 <CD v={time.seconds} l="Secs" />
             </div>
-            <button onClick={() => go('contact')} className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>Register Free</button>
+            <button onClick={() => go('contact')} className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>Register Now</button>
         </div>
     )
 }
