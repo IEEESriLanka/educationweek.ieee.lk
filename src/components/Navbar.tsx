@@ -55,7 +55,7 @@ export default function Navbar() {
           </button>
 
           {/* Desktop nav */}
-          <nav style={{display:'flex',alignItems:'center',gap:2}} className="hidden lg:flex">
+          <nav style={{alignItems:'center',gap:2}} className="hidden md:flex">
             {NAV_LINKS.map((l:NavLink)=>{
               const isAct=active===l.href.replace('#','');
               return (
@@ -110,11 +110,11 @@ export default function Navbar() {
           {/* CTA + hamburger */}
           <div style={{display:'flex',alignItems:'center',gap:10}}>
             <button onClick={()=>go('#contact')} className="btn btn-primary btn-sm hidden lg:inline-flex">Register Free</button>
-            <button onClick={()=>setOpen(v=>!v)} className="lg:hidden" style={{
+            <button onClick={()=>setOpen(v=>!v)} className="flex md:hidden" style={{
               width:36,height:36,borderRadius:9,
               background:open?'rgba(34,197,94,0.10)':'rgba(255,255,255,0.05)',
               border:'1px solid rgba(255,255,255,0.10)',
-              color:'rgba(255,255,255,0.7)',display:'flex',alignItems:'center',justifyContent:'center',cursor:'pointer',transition:'all 0.2s',
+              color:'rgba(255,255,255,0.7)',alignItems:'center',justifyContent:'center',cursor:'pointer',transition:'all 0.2s',
             }}>{open?<X size={17}/>:<Menu size={17}/>}</button>
           </div>
         </div>

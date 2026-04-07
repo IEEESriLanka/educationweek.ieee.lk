@@ -21,9 +21,9 @@ export default function Footer(){
 
       {/* Links grid */}
       <div className="wrap" style={{padding:'52px 20px 0'}}>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(min(100%,200px),1fr))',gap:'36px 48px'}}>
+        <div className='grid grid-cols-1 md:grid-cols-5 gap-10'>
           {/* Brand */}
-          <div style={{gridColumn:'span 2'}}>
+          <div className='col-span-2'>
             <img src='/assets/images/logo/ieee-edu-week-logo.png' alt="IEEE Education Week" style={{height:72}} className='-ml-2' />
             <p style={{fontSize:13,color:'rgba(255,255,255,0.28)',lineHeight:1.7,maxWidth:240}}>Connecting students, educators, and professionals through emerging technology knowledge.</p>
           </div>
@@ -75,7 +75,7 @@ export default function Footer(){
       <div style={{borderTop:'1px solid rgba(255,255,255,0.05)',marginTop:48}}>
         <div className="wrap" style={{padding:'18px 20px',display:'flex',alignItems:'center',justifyContent:'space-between',flexWrap:'wrap',gap:12}}>
           <div style={{fontSize:11,color:'rgba(255,255,255,0.18)',fontFamily:'JetBrains Mono,monospace'}}>
-            © 2025 IEEE Sri Lanka Section · IEEE Young Professionals Sri Lanka
+            © 2026 IEEE Sri Lanka Section · IEEE Young Professionals Sri Lanka
           </div>
           <button onClick={()=>window.scrollTo({top:0,behavior:'smooth'})} style={{
             display:'flex',alignItems:'center',gap:6,padding:'6px 14px',borderRadius:999,
