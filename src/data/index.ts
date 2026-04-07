@@ -7,9 +7,10 @@ import type {
 export interface Edition { year: string; url: string; active?: boolean; }
 
 export const PAST_EDITIONS: Edition[] = [
-  { year: '2025', url: 'https://educationweek.ieee.lk',       active: true  },
-  { year: '2024', url: 'https://educationweek.ieee.lk/2024/', active: false },
-  { year: '2023', url: 'https://educationweek.ieee.lk/2023/', active: false },
+  { year: '2026', url: '/',  active: true  },
+  { year: '2025', url: '/2025/',  active: false  },
+  { year: '2024', url: '/2024/', active: false },
+  { year: '2023', url: '/2023/', active: false },
 ];
 
 // ── Nav ───────────────────────────────────────────────────────────────────────

@@ -14,7 +14,7 @@ const GITHUB_REPO_NAME = 'ieee-eduweek'; // ← Change this to your actual repo 
 
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? `/${GITHUB_REPO_NAME}/` : '/',
+  base: '/',
   resolve: {
     alias: { '@': '/src' },
   },
