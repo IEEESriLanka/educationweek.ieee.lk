@@ -1,15 +1,11 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight, MapPin, Calendar, Ticket, ExternalLink, Users } from 'lucide-react';
+import Countdown from './Countdown';
+
+const eventDate = new Date('2026-04-23T08:00:00+05:30').getTime();
 
 interface TL { days:number; hours:number; minutes:number; seconds:number; }
-const getT=():TL=>{ const d=Math.max(new Date('2025-04-07T09:00:00+05:30').getTime()-Date.now(),0); return {days:Math.floor(d/86400000),hours:Math.floor(d%86400000/3600000),minutes:Math.floor(d%3600000/60000),seconds:Math.floor(d%60000/1000)}; };
-
-const CD=({v,l}:{v:number;l:string})=>(
-  <div className="cd-unit">
-    <div className="cd-digit">{String(v).padStart(2,'0')}</div>
-    <div className="cd-label">{l}</div>
-  </div>
-);
+const getT=():TL=>{ const d=Math.max(eventDate-Date.now(),0); return {days:Math.floor(d/86400000),hours:Math.floor(d%86400000/3600000),minutes:Math.floor(d%3600000/60000),seconds:Math.floor(d%60000/1000)}; };
 
 export default function Hero() {
   const [t,setT]=useState<TL>(getT());
@@ -76,22 +72,7 @@ export default function Hero() {
           </div>
 
           {/* Countdown card */}
-          <div className="glass" style={{padding:'clamp(22px,3vw,32px)',display:'flex',flexDirection:'column',justifyContent:'space-between',gap:24}}>
-            <div>
-              <div className="t-label" style={{marginBottom:6}}>Event Countdown</div>
-              <div style={{fontSize:13,color:'rgba(255,255,255,0.35)',fontWeight:500}}>Time until doors open</div>
-            </div>
-            <div style={{display:'flex',alignItems:'flex-end',gap:8,justifyContent:'center',flexWrap:'wrap'}}>
-              <CD v={t.days}    l="Days"  />
-              <div className="cd-sep">:</div>
-              <CD v={t.hours}   l="Hours" />
-              <div className="cd-sep">:</div>
-              <CD v={t.minutes} l="Mins"  />
-              <div className="cd-sep">:</div>
-              <CD v={t.seconds} l="Secs"  />
-            </div>
-            <button onClick={()=>go('contact')} className="btn btn-primary" style={{width:'100%',justifyContent:'center'}}>Register Free</button>
-          </div>
+          <Countdown time={t}/>
         </div>
 
         {/* Stat tiles */}
