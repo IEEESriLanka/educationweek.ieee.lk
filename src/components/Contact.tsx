@@ -1,7 +1,8 @@
 import { useEffect,useRef } from 'react';
-import { Phone,Mail,MapPin,ArrowRight,ExternalLink,Clock } from 'lucide-react';
+import { Phone,Mail,MapPin,ArrowRight,Clock, MousePointerClickIcon } from 'lucide-react';
 import { CONTACTS } from '../data';
 import type { ContactPerson,SectionProps } from '../types';
+import { eventDate } from '@/App';
 
 export default function Contact({id}:SectionProps){
   const ref=useRef<HTMLElement>(null);
@@ -18,7 +19,7 @@ export default function Contact({id}:SectionProps){
           <div>
             <div className="rv"><span className="eyebrow">Contact</span>
               <h2 className="t-h1" style={{marginTop:8,marginBottom:14}}>Ready to join us?</h2>
-              <p style={{fontSize:15,lineHeight:1.75,color:'rgba(255,255,255,0.45)',marginBottom:32}}>IEEE Education Week Sri Lanka 2025 is completely free. Reach out for any inquiries about registration, sponsorship, or partnerships.</p>
+              <p style={{fontSize:15,lineHeight:1.75,color:'rgba(255,255,255,0.45)',marginBottom:32}}>IEEE Education Week Sri Lanka {eventDate.getFullYear()} is completely free. Reach out for any inquiries about registration, sponsorship, or partnerships.</p>
             </div>
 
             {/* Venue card */}
@@ -28,8 +29,8 @@ export default function Contact({id}:SectionProps){
               <div style={{display:'flex',flexDirection:'column',gap:14}}>
                 {[
                   {icon:<MapPin size={14}/>,label:'Location',text:'TRACE Expert City, Colombo 10',c:'#4ade80'},
-                  {icon:<Clock size={14}/>,label:'Date & Time',text:'07 April 2025 · 9:00 AM onwards',c:'#93c5fd'},
-                  {icon:<Mail size={14}/>,label:'Entry',text:'Free — Open to all attendees',c:'#f9a8d4'},
+                  {icon:<Clock size={14}/>,label:'Date & Time',text:`${eventDate.getDate()} ${eventDate.toLocaleString('default', { month: 'long' })} ${eventDate.getFullYear()} · 8:00 AM onwards`,c:'#93c5fd'},
+                  {icon:<Mail size={14}/>,label:'Entry',text:'Free - Open to all attendees',c:'#f9a8d4'},
                 ].map(({icon,label,text,c})=>(
                   <div key={label} style={{display:'flex',alignItems:'flex-start',gap:12}}>
                     <div style={{width:30,height:30,borderRadius:8,background:`${c.replace(')',',0.12)').replace('rgb','rgba')}`,display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,color:c,border:`1px solid ${c.replace(')',',0.2)').replace('rgb','rgba')}`}}>{icon}</div>
@@ -43,8 +44,8 @@ export default function Contact({id}:SectionProps){
             </div>
 
             <div className="rv" style={{display:'flex',gap:12,flexWrap:'wrap'}}>
-              <a href="https://educationweek.ieee.lk" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{textDecoration:'none'}}>
-                Register on Official Site <ExternalLink size={14}/>
+              <a href="https://educationweek.ieee.lk" target="_blank" rel="noopener noreferrer" className="btn btn-primary animate-bounce" style={{textDecoration:'none'}}>
+                <MousePointerClickIcon size={14}/> Register on Form
               </a>
               <button onClick={()=>document.getElementById('speakers')?.scrollIntoView({behavior:'smooth'})} className="btn btn-glass">
                 Meet the Speakers <ArrowRight size={14}/>
@@ -61,14 +62,15 @@ export default function Contact({id}:SectionProps){
             <div style={{display:'flex',flexDirection:'column',gap:12}}>
               {CONTACTS.map((c:ContactPerson,i:number)=>(
                 <div key={c.id} className={`rv glass glass-hover d${i+1}`} style={{padding:'clamp(18px,2.5vw,24px)',borderRadius:'var(--r3)'}}>
-                  <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:14}}>
-                    <div style={{width:42,height:42,borderRadius:12,background:'linear-gradient(135deg,rgba(21,128,61,0.5),rgba(34,197,94,0.3))',border:'1px solid rgba(74,222,128,0.2)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
-                      <span style={{fontWeight:800,fontSize:16,color:'rgba(255,255,255,0.80)'}}>{c.name.charAt(0)}</span>
+                  {/* <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:14}}> */}
+                  <div className='flex flex-row gap-4 items-center mb-3'>
+                    <div className='h-full aspect-square rounded-md overflow-hidden flex-shrink-0'>
+                      <img src={c.photo} alt={c.name} className='h-14' />
                     </div>
-                    <div>
-                      <div style={{fontWeight:700,fontSize:14,color:'rgba(255,255,255,0.82)'}}>{c.name}</div>
-                      <div style={{fontSize:12,fontWeight:600,color:'#4ade80',marginTop:1}}>{c.role}</div>
-                      <div style={{fontSize:12,color:'rgba(255,255,255,0.30)'}}>{c.organization}</div>
+                    <div className='flex flex-col'>
+                      <span className='text-sm font-semibold text-white/80'>{c.name}</span>
+                      <span className='text-[12px] font-medium text-[#4ade80]'>{c.role}</span>
+                      <span className='text-[12px] text-white/30'>{c.organization}</span>
                     </div>
                   </div>
                   <div style={{borderTop:'1px solid rgba(255,255,255,0.07)',paddingTop:12,display:'flex',flexDirection:'column',gap:8}}>

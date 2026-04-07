@@ -1,5 +1,6 @@
 import { ArrowUp,ExternalLink } from 'lucide-react';
 import { NAV_LINKS,PAST_EDITIONS } from '../data';
+import { eventDate } from '@/App';
 
 export default function Footer(){
   const go=(href:string)=>{ if(href.startsWith('#')) document.getElementById(href.slice(1))?.scrollIntoView({behavior:'smooth'}); };
@@ -10,7 +11,7 @@ export default function Footer(){
         <div className="wrap" style={{display:'flex',alignItems:'center',justifyContent:'space-between',flexWrap:'wrap',gap:24}}>
           <div>
             <div style={{fontWeight:800,fontSize:'clamp(18px,3vw,26px)',color:'rgba(255,255,255,0.88)',letterSpacing:'-0.02em',marginBottom:6}}>Ready to attend?</div>
-            <div style={{fontSize:14,color:'rgba(255,255,255,0.30)'}}>07 April 2025 · TRACE Expert City · Free Entrance</div>
+            <div style={{fontSize:14,color:'rgba(255,255,255,0.30)'}}>{eventDate.getDate()} {eventDate.toLocaleString('default', { month: 'long' })} {eventDate.getFullYear()} · TRACE Expert City · Free Entrance</div>
           </div>
           <a href="https://educationweek.ieee.lk" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{textDecoration:'none',flexShrink:0}}>
             Register Free <ExternalLink size={14}/>
@@ -20,18 +21,10 @@ export default function Footer(){
 
       {/* Links grid */}
       <div className="wrap" style={{padding:'52px 20px 0'}}>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(min(100%,200px),1fr))',gap:'36px 48px'}}>
+        <div className='grid grid-cols-1 md:grid-cols-5 gap-10'>
           {/* Brand */}
-          <div style={{gridColumn:'span 2'}}>
-            <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:14}}>
-              <div style={{width:34,height:34,borderRadius:10,background:'linear-gradient(135deg,rgba(21,128,61,0.7),rgba(34,197,94,0.5))',border:'1px solid rgba(74,222,128,0.25)',display:'flex',alignItems:'center',justifyContent:'center'}}>
-                <span style={{fontSize:9,fontWeight:800,color:'white'}}>IEEE</span>
-              </div>
-              <div>
-                <div style={{fontWeight:700,fontSize:13,color:'rgba(255,255,255,0.80)'}}>Education Week</div>
-                <div style={{fontSize:10,color:'rgba(255,255,255,0.25)',marginTop:1}}>Sri Lanka 2025</div>
-              </div>
-            </div>
+          <div className='col-span-2'>
+            <img src='/assets/images/logo/ieee-edu-week-logo.png' alt="IEEE Education Week" style={{height:72}} className='-ml-2' />
             <p style={{fontSize:13,color:'rgba(255,255,255,0.28)',lineHeight:1.7,maxWidth:240}}>Connecting students, educators, and professionals through emerging technology knowledge.</p>
           </div>
 
@@ -82,7 +75,7 @@ export default function Footer(){
       <div style={{borderTop:'1px solid rgba(255,255,255,0.05)',marginTop:48}}>
         <div className="wrap" style={{padding:'18px 20px',display:'flex',alignItems:'center',justifyContent:'space-between',flexWrap:'wrap',gap:12}}>
           <div style={{fontSize:11,color:'rgba(255,255,255,0.18)',fontFamily:'JetBrains Mono,monospace'}}>
-            © 2025 IEEE Sri Lanka Section · IEEE Young Professionals Sri Lanka
+            © 2026 IEEE Sri Lanka Section · IEEE Young Professionals Sri Lanka
           </div>
           <button onClick={()=>window.scrollTo({top:0,behavior:'smooth'})} style={{
             display:'flex',alignItems:'center',gap:6,padding:'6px 14px',borderRadius:999,

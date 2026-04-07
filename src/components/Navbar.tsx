@@ -50,18 +50,12 @@ export default function Navbar() {
         <div className="wrap" style={{display:'flex',alignItems:'center',justifyContent:'space-between',height:64}}>
 
           {/* Logo */}
-          <button onClick={()=>go('#home')} style={{display:'flex',alignItems:'center',gap:10,border:'none',background:'none',cursor:'pointer',padding:0}}>
-            <div style={{width:34,height:34,borderRadius:10,background:'linear-gradient(135deg,rgba(21,128,61,0.8),rgba(34,197,94,0.6))',border:'1px solid rgba(74,222,128,0.3)',display:'flex',alignItems:'center',justifyContent:'center',backdropFilter:'blur(8px)',WebkitBackdropFilter:'blur(8px)',boxShadow:'0 0 16px rgba(34,197,94,0.2)'}}>
-              <span style={{fontSize:9,fontWeight:800,color:'white',letterSpacing:'-0.5px'}}>IEEE</span>
-            </div>
-            <div style={{display:'flex',flexDirection:'column',lineHeight:1}}>
-              <span style={{fontSize:13,fontWeight:700,color:'rgba(255,255,255,0.92)',letterSpacing:'-0.3px'}}>Education Week</span>
-              <span style={{fontSize:10,fontWeight:500,color:'rgba(255,255,255,0.35)',marginTop:2,letterSpacing:'0.04em'}}>Sri Lanka 2025</span>
-            </div>
+          <button onClick={()=>go('#home')}>
+            <img src='/assets/images/logo/ieee-edu-week-logo.png' alt="IEEE Education Week" style={{height:64}} />
           </button>
 
           {/* Desktop nav */}
-          <nav style={{display:'flex',alignItems:'center',gap:2}} className="hidden lg:flex">
+          <nav style={{alignItems:'center',gap:2}} className="hidden md:flex">
             {NAV_LINKS.map((l:NavLink)=>{
               const isAct=active===l.href.replace('#','');
               return (
@@ -115,12 +109,12 @@ export default function Navbar() {
 
           {/* CTA + hamburger */}
           <div style={{display:'flex',alignItems:'center',gap:10}}>
-            <button onClick={()=>go('#contact')} className="btn btn-primary btn-sm hidden lg:inline-flex">Register Free</button>
-            <button onClick={()=>setOpen(v=>!v)} className="lg:hidden" style={{
+            <button onClick={()=>go('#contact')} className="btn btn-primary btn-sm hidden lg:inline-flex">Register Now</button>
+            <button onClick={()=>setOpen(v=>!v)} className="flex md:hidden" style={{
               width:36,height:36,borderRadius:9,
               background:open?'rgba(34,197,94,0.10)':'rgba(255,255,255,0.05)',
               border:'1px solid rgba(255,255,255,0.10)',
-              color:'rgba(255,255,255,0.7)',display:'flex',alignItems:'center',justifyContent:'center',cursor:'pointer',transition:'all 0.2s',
+              color:'rgba(255,255,255,0.7)',alignItems:'center',justifyContent:'center',cursor:'pointer',transition:'all 0.2s',
             }}>{open?<X size={17}/>:<Menu size={17}/>}</button>
           </div>
         </div>

@@ -57,22 +57,19 @@ export const SPEAKERS: Speaker[] = [
 
 // ── Schedule ──────────────────────────────────────────────────────────────────
 export const SCHEDULE_SESSIONS: ScheduleSession[] = [
-  { id:'s1',  time:'09:00–09:30', title:'Opening Ceremony',                                                    tracks:['school','undergraduate','graduate'], type:'ceremony'   },
-  { id:'s2',  time:'09:30–10:30', title:'Career Guidance Session',                                             tracks:['school'],                           type:'session'    },
-  { id:'s3',  time:'09:30–10:30', title:'Session for Teachers — Part 1',                                       tracks:['school'],                           type:'session'    },
-  { id:'s4',  time:'11:00–12:00', title:'STEM Education Session',                                              tracks:['school'],                           type:'workshop'   },
-  { id:'s5',  time:'11:00–12:00', title:'Session for Teachers — Part 2',                                       tracks:['school'],                           type:'session'    },
-  { id:'s6',  time:'12:00–12:10', title:'Introduction to Arduino Challenge',                                   tracks:['school'],                           type:'session'    },
-  { id:'s7',  time:'12:10–12:40', title:'Cyber Safety Session',                                                tracks:['school'],                           type:'session'    },
-  { id:'s8',  time:'01:00–01:30', title:'Challenge Sphere',                                                    tracks:['school'],                           type:'workshop'   },
-  { id:'s9',  time:'01:30–02:00', title:'Mastering Perplexity: Generative AI for Smarter Research',            tracks:['school','undergraduate'],            type:'session',   speaker:'Mr. Sabilashan Ganeshan'  },
-  { id:'s10', time:'02:00–05:00', title:'CV Clinic & Future Forward: Your Next Step in Industry / Academia',   tracks:['school'],                           type:'workshop'   },
-  { id:'s11', time:'02:00–02:30', title:'IEEE for Researchers: Maximising Opportunities for Graduate Students', tracks:['graduate'],                         type:'session',   speaker:'Dr. Achintha Kondarage'   },
-  { id:'s12', time:'02:30–03:10', title:'Staying Relevant in the Age of AI',                                   tracks:['graduate'],                         type:'session',   speaker:'Dr. Ranga Rodrigo'        },
-  { id:'s13', time:'03:10–03:50', title:'Thriving Together: Navigating Graduate School Challenges',            tracks:['graduate'],                         type:'session'    },
-  { id:'s14', time:'04:00–05:00', title:'Grant Writing for Academics and Industries',                          tracks:['graduate'],                         type:'session',   speaker:'Dr. Subodha Charles'      },
-  { id:'s15', time:'05:00–06:00', title:'Revolutionising Research with Generative AI',                         tracks:['school','graduate'],                 type:'session',   speaker:'Prof. Roshan Ragel'       },
-  { id:'s16', time:'06:00–08:00', title:'IMPACT Mic & Networking Session',                                     tracks:['school','undergraduate','graduate'], type:'networking' },
+  { id: 's0', time: '08:00–09:00', title: 'SLI Web Demo / Video', tracks: ['school', 'undergraduate', 'graduate'], type: 'ceremony' },
+  { id: 's1', time: '09:00–09:30', title: 'Opening Ceremony', tracks: ['school', 'undergraduate', 'graduate'], type: 'ceremony' },
+  { id: 's2', time: '09:30–10:30', title: 'Career Guidance Session', tracks: ['school'], type: 'session' },
+  { id: 's3', time: '10:30–11:00', title: 'Additional time to manage students', tracks: ['school'], type: 'session' },
+  { id: 's4', time: '11:00–11:30', title: 'Team 1: CERT Cyber Safety & Snacks', tracks: ['school'], type: 'workshop' },
+  { id: 's5', time: '11:00–11:30', title: 'STEM Stalls for Student Team 2', tracks: ['school'], type: 'workshop' },
+  { id: 's6', time: '11:00–11:30', title: 'Prompt Engineering', tracks: ['undergraduate', 'graduate'], type: 'session' },
+  { id: 's7', time: '11:30–12:00', title: 'Team 2: CERT Cyber Safety & Snacks', tracks: ['school'], type: 'workshop' },
+  { id: 's8', time: '11:30–12:00', title: 'STEM Stalls for Student Team 1', tracks: ['school'], type: 'workshop' },
+  { id: 's9', time: '11:30–12:00', title: 'Navigating through your Research', tracks: ['graduate'], type: 'session', speaker: 'Dr. Ranga' },
+  { id: 's10', time: '01:30–03:00', title: 'CV Clinic | Mock Interview Session', tracks: ['undergraduate', 'graduate'], type: 'workshop' },
+  { id: 's11', time: '01:30–03:00', title: 'Fun Activities for CV Clinic idle persons', tracks: ['undergraduate'], type: 'workshop' },
+  { id: 's12', time: '02:30–03:30', title: 'Travel grants through IEEE for your conferences', tracks: ['graduate'], type: 'session', speaker: 'Mr. Upul, Mr. Peshan, Dr. Akila' },
 ];
 
 // ── Organizers ────────────────────────────────────────────────────────────────
@@ -91,23 +88,47 @@ export const ORGANIZERS: Organizer[] = [
 
 // ── Partners ──────────────────────────────────────────────────────────────────
 export const PARTNERS: Partner[] = [
-  { id:'ifs',        name:'IFS',               tier:'title'       },
-  { id:'trace',      name:'TRACE Sri Lanka',   tier:'ecosystem'   },
-  { id:'perplexity', name:'Perplexity',         tier:'ai-knowledge'},
-  { id:'learn',      name:'LEARN',              tier:'ai-knowledge'},
-  { id:'idea8',      name:'Idea8',              tier:'industry'    },
-  { id:'vsis',       name:'VSIS',               tier:'industry'    },
-  { id:'nagarro',    name:'Nagarro',             tier:'industry'    },
-  { id:'inivos',     name:'Inivos Consulting',   tier:'industry'    },
-  { id:'virtusa',    name:'Virtusa',             tier:'industry'    },
-  { id:'makers',     name:'Makers Global',       tier:'stem'        },
-  { id:'gavesha',    name:'Gavesha Labs',         tier:'stem'        },
-  { id:'roboticgen', name:'RoboticGen',           tier:'stem'        },
+  { id: "ifs", name: "IFS", tier: "title", logoUrl: "ifs.png" },
+  { id: "trace", name: "TRACE Sri Lanka", tier: "ecosystem", logoUrl: "trace.png" },
+  { id: 'slsac', name: 'SLSAC', tier: 'colab', logoUrl: 'slsac.png' },
+  { id: 'wie', name: 'WIE', tier: 'colab', logoUrl: 'wie.png' },
+  { id: 'sight', name: 'SIGHT', tier: 'colab', logoUrl: 'sight.png' },
+  { id: 'sl2college', name: 'SL2C', tier: 'colab', logoUrl: 'sl2c.png' },
+  { id: "studpro", name: "StudPro", tier: "program", logoUrl: "studpro.png" },
+  { id: "y2npro", name: "Y2NPro", tier: "program", logoUrl: "y2npro.png" },
+  { id: "aidsl", name: "AIDSL", tier: "program", logoUrl: "aidsl.png" },
+  { id: "nenasa", name: "Nenasa", tier: "stem", logoUrl: "nanasa.png" },
+  { id: "gavesha", name: "Gavesha Labs", tier: "stem", logoUrl: "gavesha.png" },
 ];
 
 // ── Contacts ──────────────────────────────────────────────────────────────────
 export const CONTACTS: ContactPerson[] = [
-  { id:'kulunu',    name:'Kulunu Wijesoory',    role:'Vice Chairperson',  organization:'IEEE Young Professionals Sri Lanka', phone:'+94 710 646 688', email:'eduweek@ieee.lk'  },
-  { id:'chathurya', name:'Chathurya Ekanayake', role:'Committee Member',  organization:'IEEE Young Professionals Sri Lanka', phone:'+94 702 525 880', email:'eduweek@ieee.lk'  },
-  { id:'kavindra',  name:'Kavindra Weerasinghe', role:'Chair',            organization:'IEEE Sri Lanka Inspire',             phone:'+94 774 743 603', email:'inspire@ieee.lk'  },
+  {
+    id: "shakil",
+    name: "Shakil Arifeen",
+    role: "Vice Chairperson",
+    organization: "IEEE Young Professionals Sri Lanka",
+    phone: "+94 710 646 688",
+    email: "eduweek@ieee.lk",
+    photo: "/assets/images/oc/chair_raees.jpg",
+  },
+  {
+    id: "kavindra",
+    name: "Kavindra Weerasinghe",
+    role: "Committee Member & OC Chair",
+    organization: "IEEE Young Professionals Sri Lanka",
+    phone: "+94 774 743 603",
+    email: "eduweek@ieee.lk",
+    photo: "/assets/images/oc/kavindra.jpg",
+
+  },
+  {
+    id: "raees",
+    name: "Raees Ahamed",
+    role: "Chair",
+    organization: "IEEE Sri Lanka Inspire",
+    phone: "+94 76 495 3014",
+    email: "inspire@ieee.lk",
+    photo: "/assets/images/oc/chair_raees.jpg",
+  },
 ];

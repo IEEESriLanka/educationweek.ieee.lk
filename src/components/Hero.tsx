@@ -1,15 +1,11 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight, MapPin, Calendar, Ticket, ExternalLink, Users } from 'lucide-react';
+import Countdown from './Countdown';
+import { eventDate } from '@/App';
+
 
 interface TL { days:number; hours:number; minutes:number; seconds:number; }
-const getT=():TL=>{ const d=Math.max(new Date('2025-04-07T09:00:00+05:30').getTime()-Date.now(),0); return {days:Math.floor(d/86400000),hours:Math.floor(d%86400000/3600000),minutes:Math.floor(d%3600000/60000),seconds:Math.floor(d%60000/1000)}; };
-
-const CD=({v,l}:{v:number;l:string})=>(
-  <div className="cd-unit">
-    <div className="cd-digit">{String(v).padStart(2,'0')}</div>
-    <div className="cd-label">{l}</div>
-  </div>
-);
+const getT=():TL=>{ const d=Math.max(eventDate.getTime()-Date.now(),0); return {days:Math.floor(d/86400000),hours:Math.floor(d%86400000/3600000),minutes:Math.floor(d%3600000/60000),seconds:Math.floor(d%60000/1000)}; };
 
 export default function Hero() {
   const [t,setT]=useState<TL>(getT());
@@ -22,24 +18,36 @@ export default function Hero() {
       <div className="wrap" style={{paddingTop:60,paddingBottom:80}}>
 
         {/* Eyebrow */}
-        <div style={{display:'flex',justifyContent:'center',marginBottom:28}}>
+        {/* <div style={{display:'flex',justifyContent:'center',marginBottom:28}}>
           <span className={`eyebrow rv${in_?' on':''}`}>
             <span className="live-dot"/>
-            IEEE Sri Lanka Section · 07 April 2025
+            {eventDate.getDate()} {eventDate.toLocaleString('default',{month:'long'})} {eventDate.getFullYear()}
           </span>
-        </div>
+        </div> */}
 
+        <div className={`rv${in_?' on':''}`} style={{display:'flex',justifyContent:'center',marginBottom:16}}>
+          <img src="/assets/images/logo/ieee-sl-section-logo.png" alt="IEEE Sri Lanka Section" style={{height:48}}/>
+        </div>
+        
         {/* Heading */}
         <h1 className={`t-display rv d1${in_?' on':''}`} style={{textAlign:'center',maxWidth:800,margin:'0 auto 20px'}}>
           IEEE Education Week{' '}
-          <span className="t-grad">Sri Lanka</span>
-          <br/>— 2025
+          <span className="t-grad">Sri Lanka </span>
+          {eventDate.getFullYear()}
         </h1>
 
         <p className={`rv d2${in_?' on':''}`} style={{textAlign:'center',fontSize:'clamp(15px,1.8vw,18px)',color:'rgba(255,255,255,0.50)',maxWidth:520,margin:'0 auto 40px',lineHeight:1.75,fontWeight:400}}>
           A platform for students, undergraduates, graduates, and professionals to
           showcase expertise and explore emerging technologies.
         </p>
+
+        <div className='flex flex-col justify-center items-center gap-3'>
+          <span className='text-xs font-light'>Organized By</span>
+          <div className="flex flex-row justify-center gap-6 h-12 mb-8 -mt-2">
+            <img src="/assets/images/logo/yp.png" alt="Young Professionals" className='hue-rotate-180 invert'/>
+            <img src="/assets/images/logo/slinspire-logo.png" alt="SLInspire"/>
+          </div>
+        </div>
 
         {/* CTAs */}
         <div className={`rv d3${in_?' on':''}`} style={{display:'flex',justifyContent:'center',gap:12,flexWrap:'wrap',marginBottom:64}}>
@@ -57,7 +65,7 @@ export default function Hero() {
             <div>
               <div className="t-label" style={{marginBottom:10}}>Event Details</div>
               <div style={{fontWeight:800,fontSize:'clamp(22px,3.5vw,36px)',letterSpacing:'-0.03em',lineHeight:1.1,color:'rgba(255,255,255,0.92)'}}>
-                07<sup style={{fontSize:12,verticalAlign:'super'}}>th</sup> April 2025
+                {eventDate.getDate()}<sup style={{fontSize:12,verticalAlign:'super'}}>th</sup> {eventDate.toLocaleString('default',{month:'long'})} {eventDate.getFullYear()}
                 <span style={{display:'block',fontWeight:500,fontSize:'clamp(14px,1.8vw,17px)',color:'rgba(255,255,255,0.45)',marginTop:5}}>TRACE Expert City, Colombo 10</span>
               </div>
             </div>
@@ -76,30 +84,15 @@ export default function Hero() {
           </div>
 
           {/* Countdown card */}
-          <div className="glass" style={{padding:'clamp(22px,3vw,32px)',display:'flex',flexDirection:'column',justifyContent:'space-between',gap:24}}>
-            <div>
-              <div className="t-label" style={{marginBottom:6}}>Event Countdown</div>
-              <div style={{fontSize:13,color:'rgba(255,255,255,0.35)',fontWeight:500}}>Time until doors open</div>
-            </div>
-            <div style={{display:'flex',alignItems:'flex-end',gap:8,justifyContent:'center',flexWrap:'wrap'}}>
-              <CD v={t.days}    l="Days"  />
-              <div className="cd-sep">:</div>
-              <CD v={t.hours}   l="Hours" />
-              <div className="cd-sep">:</div>
-              <CD v={t.minutes} l="Mins"  />
-              <div className="cd-sep">:</div>
-              <CD v={t.seconds} l="Secs"  />
-            </div>
-            <button onClick={()=>go('contact')} className="btn btn-primary" style={{width:'100%',justifyContent:'center'}}>Register Free</button>
-          </div>
+          <Countdown time={t}/>
         </div>
 
         {/* Stat tiles */}
         <div className="stat-row" style={{marginTop:12,maxWidth:'100%'}}>
           {[
-            {v:'07 Apr',label:'Event Date',    sub:'2025'},
-            {v:'Free',  label:'Entrance',       sub:'No registration fee'},
-            {v:'10+',   label:'Expert Speakers',sub:'Industry & academia'},
+            {v:`${eventDate.getDate()} ${eventDate.toLocaleString('default', { month: 'short' })}`, label:'Event Date', sub: eventDate.getFullYear()},
+            {v:'Free', label:'Entrance', sub:'No registration fee'},
+            {v:'10+', label:'Expert Speakers', sub:'Industry & academia'},
           ].map(s=>(
             <div key={s.label} className="glass glass-hover" style={{padding:'clamp(16px,2.5vw,24px) clamp(16px,2.5vw,28px)',borderRadius:'var(--r2)'}}>
               <div style={{fontWeight:800,fontSize:'clamp(20px,3vw,34px)',color:'rgba(255,255,255,0.88)',letterSpacing:'-0.03em',lineHeight:1}}>{s.v}</div>
