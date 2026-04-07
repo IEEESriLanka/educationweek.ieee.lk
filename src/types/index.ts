@@ -10,5 +10,5 @@ export interface ScheduleSession {
 }
 export interface Organizer  { id: string; name: string; logoUrl?: string; type: 'organizer'|'collaboration'|'support'; }
 export interface Partner    { id: string; name: string; logoUrl?: string; tier: 'title'|'ecosystem'|'ai-knowledge'|'industry'|'stem'; }
-export interface ContactPerson { id: string; name: string; role: string; organization: string; phone: string; email: string; }
+export interface ContactPerson { id: string; name: string; role: string; organization: string; phone: string; email: string; photo: string }
 export interface SectionProps  { id?: string; className?: string; }

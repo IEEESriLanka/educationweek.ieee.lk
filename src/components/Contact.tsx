@@ -62,14 +62,15 @@ export default function Contact({id}:SectionProps){
             <div style={{display:'flex',flexDirection:'column',gap:12}}>
               {CONTACTS.map((c:ContactPerson,i:number)=>(
                 <div key={c.id} className={`rv glass glass-hover d${i+1}`} style={{padding:'clamp(18px,2.5vw,24px)',borderRadius:'var(--r3)'}}>
-                  <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:14}}>
-                    <div style={{width:42,height:42,borderRadius:12,background:'linear-gradient(135deg,rgba(21,128,61,0.5),rgba(34,197,94,0.3))',border:'1px solid rgba(74,222,128,0.2)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
-                      <span style={{fontWeight:800,fontSize:16,color:'rgba(255,255,255,0.80)'}}>{c.name.charAt(0)}</span>
+                  {/* <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:14}}> */}
+                  <div className='flex flex-row gap-4 items-center mb-3'>
+                    <div className='h-full aspect-square rounded-md overflow-hidden flex-shrink-0'>
+                      <img src={c.photo} alt={c.name} className='h-14' />
                     </div>
-                    <div>
-                      <div style={{fontWeight:700,fontSize:14,color:'rgba(255,255,255,0.82)'}}>{c.name}</div>
-                      <div style={{fontSize:12,fontWeight:600,color:'#4ade80',marginTop:1}}>{c.role}</div>
-                      <div style={{fontSize:12,color:'rgba(255,255,255,0.30)'}}>{c.organization}</div>
+                    <div className='flex flex-col'>
+                      <span className='text-sm font-semibold text-white/80'>{c.name}</span>
+                      <span className='text-[12px] font-medium text-[#4ade80]'>{c.role}</span>
+                      <span className='text-[12px] text-white/30'>{c.organization}</span>
                     </div>
                   </div>
                   <div style={{borderTop:'1px solid rgba(255,255,255,0.07)',paddingTop:12,display:'flex',flexDirection:'column',gap:8}}>

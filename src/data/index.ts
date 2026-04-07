@@ -107,7 +107,32 @@ export const PARTNERS: Partner[] = [
 
 // ── Contacts ──────────────────────────────────────────────────────────────────
 export const CONTACTS: ContactPerson[] = [
-  { id:'kulunu',    name:'Kulunu Wijesoory',    role:'Vice Chairperson',  organization:'IEEE Young Professionals Sri Lanka', phone:'+94 710 646 688', email:'eduweek@ieee.lk'  },
-  { id:'chathurya', name:'Chathurya Ekanayake', role:'Committee Member',  organization:'IEEE Young Professionals Sri Lanka', phone:'+94 702 525 880', email:'eduweek@ieee.lk'  },
-  { id:'kavindra',  name:'Kavindra Weerasinghe', role:'Chair',            organization:'IEEE Sri Lanka Inspire',             phone:'+94 774 743 603', email:'inspire@ieee.lk'  },
+  {
+    id: "shakil",
+    name: "Shakil Arifeen",
+    role: "Vice Chairperson",
+    organization: "IEEE Young Professionals Sri Lanka",
+    phone: "+94 710 646 688",
+    email: "eduweek@ieee.lk",
+    photo: "/assets/images/oc/chair_raees.jpg",
+  },
+  {
+    id: "kavindra",
+    name: "Kavindra Weerasinghe",
+    role: "Committee Member & OC Chair",
+    organization: "IEEE Young Professionals Sri Lanka",
+    phone: "+94 774 743 603",
+    email: "eduweek@ieee.lk",
+    photo: "/assets/images/oc/kavindra.jpg",
+
+  },
+  {
+    id: "raees",
+    name: "Raees Ahamed",
+    role: "Chair",
+    organization: "IEEE Sri Lanka Inspire",
+    phone: "+94 76 495 3014",
+    email: "inspire@ieee.lk",
+    photo: "/assets/images/oc/chair_raees.jpg",
+  },
 ];
