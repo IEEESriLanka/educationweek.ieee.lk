@@ -18,24 +18,36 @@ export default function Hero() {
       <div className="wrap" style={{paddingTop:60,paddingBottom:80}}>
 
         {/* Eyebrow */}
-        <div style={{display:'flex',justifyContent:'center',marginBottom:28}}>
+        {/* <div style={{display:'flex',justifyContent:'center',marginBottom:28}}>
           <span className={`eyebrow rv${in_?' on':''}`}>
             <span className="live-dot"/>
-            IEEE Sri Lanka Section · {eventDate.getDate()} {eventDate.toLocaleString('default',{month:'long'})} {eventDate.getFullYear()}
+            {eventDate.getDate()} {eventDate.toLocaleString('default',{month:'long'})} {eventDate.getFullYear()}
           </span>
-        </div>
+        </div> */}
 
+        <div className={`rv${in_?' on':''}`} style={{display:'flex',justifyContent:'center',marginBottom:16}}>
+          <img src="/assets/images/logo/ieee-sl-section-logo.png" alt="IEEE Sri Lanka Section" style={{height:48}}/>
+        </div>
+        
         {/* Heading */}
         <h1 className={`t-display rv d1${in_?' on':''}`} style={{textAlign:'center',maxWidth:800,margin:'0 auto 20px'}}>
           IEEE Education Week{' '}
-          <span className="t-grad">Sri Lanka</span>
-          <br/>{eventDate.getFullYear()}
+          <span className="t-grad">Sri Lanka </span>
+          {eventDate.getFullYear()}
         </h1>
 
         <p className={`rv d2${in_?' on':''}`} style={{textAlign:'center',fontSize:'clamp(15px,1.8vw,18px)',color:'rgba(255,255,255,0.50)',maxWidth:520,margin:'0 auto 40px',lineHeight:1.75,fontWeight:400}}>
           A platform for students, undergraduates, graduates, and professionals to
           showcase expertise and explore emerging technologies.
         </p>
+
+        <div className='flex flex-col justify-center items-center gap-3'>
+          <span className='text-xs font-light'>Organized By</span>
+          <div className="flex flex-row justify-center gap-6 h-12 mb-8 -mt-2">
+            <img src="/assets/images/logo/yp.png" alt="Young Professionals" className='hue-rotate-180 invert'/>
+            <img src="/assets/images/logo/slinspire-logo.png" alt="SLInspire"/>
+          </div>
+        </div>
 
         {/* CTAs */}
         <div className={`rv d3${in_?' on':''}`} style={{display:'flex',justifyContent:'center',gap:12,flexWrap:'wrap',marginBottom:64}}>
