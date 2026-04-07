@@ -50,14 +50,8 @@ export default function Navbar() {
         <div className="wrap" style={{display:'flex',alignItems:'center',justifyContent:'space-between',height:64}}>
 
           {/* Logo */}
-          <button onClick={()=>go('#home')} style={{display:'flex',alignItems:'center',gap:10,border:'none',background:'none',cursor:'pointer',padding:0}}>
-            <div style={{width:34,height:34,borderRadius:10,background:'linear-gradient(135deg,rgba(21,128,61,0.8),rgba(34,197,94,0.6))',border:'1px solid rgba(74,222,128,0.3)',display:'flex',alignItems:'center',justifyContent:'center',backdropFilter:'blur(8px)',WebkitBackdropFilter:'blur(8px)',boxShadow:'0 0 16px rgba(34,197,94,0.2)'}}>
-              <span style={{fontSize:9,fontWeight:800,color:'white',letterSpacing:'-0.5px'}}>IEEE</span>
-            </div>
-            <div style={{display:'flex',flexDirection:'column',lineHeight:1}}>
-              <span style={{fontSize:13,fontWeight:700,color:'rgba(255,255,255,0.92)',letterSpacing:'-0.3px'}}>Education Week</span>
-              <span style={{fontSize:10,fontWeight:500,color:'rgba(255,255,255,0.35)',marginTop:2,letterSpacing:'0.04em'}}>Sri Lanka 2025</span>
-            </div>
+          <button onClick={()=>go('#home')}>
+            <img src='/assets/images/logo/ieee-edu-week-logo.png' alt="IEEE Education Week" style={{height:64}} />
           </button>
 
           {/* Desktop nav */}
