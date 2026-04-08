@@ -44,7 +44,7 @@ export default function Contact({id}:SectionProps){
             </div>
 
             <div className="rv" style={{display:'flex',gap:12,flexWrap:'wrap'}}>
-              <a href="https://educationweek.ieee.lk" target="_blank" rel="noopener noreferrer" className="btn btn-primary animate-bounce" style={{textDecoration:'none'}}>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLs7oBYwxT8XUVxzi-cd3Yc-6TOnpA_ZDTd8fj7Jk6yJto0g/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" className="btn btn-primary animate-button" style={{textDecoration:'none'}}>
                 <MousePointerClickIcon size={14}/> Register on Form
               </a>
               <button onClick={()=>document.getElementById('speakers')?.scrollIntoView({behavior:'smooth'})} className="btn btn-glass">
