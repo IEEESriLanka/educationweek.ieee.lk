@@ -21,11 +21,11 @@ export default function Partners({id}:SectionProps){
   const grouped=ORDER.reduce<Record<Tier,Partner[]>>((acc,t)=>{ acc[t]=PARTNERS.filter(p=>p.tier===t); return acc; },{} as Record<Tier,Partner[]>);
 
   return(
-    <section id={id} ref={ref} className="section" style={{position:'relative',zIndex:2}}>
+    <section id={id} ref={ref} className="section bg-white text-black" style={{position:'relative',zIndex:2}}>
       <div className="wrap" style={{maxWidth:1100,margin:'0 auto'}}>
         <div className="rv" style={{textAlign:'center',marginBottom:56}}>
           <span className="eyebrow">Partners</span>
-          <h2 className="t-h1" style={{marginTop:8}}>Backed by industry leaders</h2>
+          <h2 className="text-2xl font-bold" style={{marginTop:8}}>Backed by industry leaders</h2>
         </div>
         <div style={{display:'flex',flexDirection:'column',gap:44}}>
           {ORDER.map(tier=>{
@@ -35,8 +35,8 @@ export default function Partners({id}:SectionProps){
               <div key={tier} className="rv">
                 <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:16}}>
                   <span style={{width:8,height:8,borderRadius:'50%',background:dot,flexShrink:0,boxShadow:`0 0 8px ${dot}`}}/>
-                  <span style={{fontSize:10,fontWeight:600,color:'rgba(255,255,255,0.25)',letterSpacing:'0.1em',textTransform:'uppercase',fontFamily:'JetBrains Mono,monospace'}}>{label}</span>
-                  <div style={{flex:1,height:1,background:'rgba(255,255,255,0.07)'}}/>
+                  <span className='' style={{fontSize:10,fontWeight:600,letterSpacing:'0.1em',textTransform:'uppercase',fontFamily:'JetBrains Mono,monospace'}}>{label}</span>
+                  <div style={{flex:1,height:1,background:'rgba(0,0,0,0.07)'}}/>
                 </div>
                 <div style={{display:'flex',flexWrap:'wrap',gap:10}}>
                   {items.map(p=>(

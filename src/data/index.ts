@@ -24,7 +24,7 @@ export const NAV_LINKS: NavLink[] = [
 
 // ── Hero stats ────────────────────────────────────────────────────────────────
 export const HERO_STATS: HeroStat[] = [
-  { value: '07', label: 'April 2025', suffix: 'th' },
+  { value: '23', label: 'April 2025', suffix: 'rd' },
   { value: '10+', label: 'Expert Speakers' },
   { value: 'Free', label: 'Entrance' },
   { value: '3', label: 'Tracks' },
@@ -42,17 +42,17 @@ export const FEATURES: Feature[] = [
 
 // ── Speakers ──────────────────────────────────────────────────────────────────
 export const SPEAKERS: Speaker[] = [
-  { id:'rahula',       name:'Prof. Rahula Attalage',    title:'Senior Professor, Mechanical Engineering', affiliations:['University of Moratuwa','Commission Member, UGC'],                                          imageUrl:'https://educationweek.ieee.lk/img/speakers/Rahula.webp'       },
-  { id:'vasanthapriyan',name:'Prof. Vasanthapriyan',   title:'Professor in Computer Science',            affiliations:['Founding Dean, Faculty of Computing at SUSL','Chair, IEEE Sri Lanka Section 2025'],         imageUrl:'https://educationweek.ieee.lk/img/speakers/Vasanthapriyan.webp'},
-  { id:'roshan',       name:'Prof. Roshan Ragel',       title:'Professor, Dept. of Computer Science',    affiliations:['University of Peradeniya','AI Advisory Committee, ICTA','Consultancy CEO, LEARN'],          imageUrl:'https://educationweek.ieee.lk/img/speakers/Roshan.webp'       },
-  { id:'sankalpa',     name:'Dr. Sankalpa Gamwarige',   title:'Managing Director',                       affiliations:['Nagarro','Senior VP, Trace','PhD — Electronics & Telecom Engineering'],                     imageUrl:'https://educationweek.ieee.lk/img/speakers/Sankalpa.webp'     },
-  { id:'achintha',     name:'Dr. Achintha Kondarage',   title:'Staff Program Manager',                   affiliations:['Synopsys Inc.','PhD in Biomedical Engineering (UOM)','Visiting Lecturer, USJ'],             imageUrl:'https://educationweek.ieee.lk/img/speakers/achintha.webp'     },
-  { id:'ranga',        name:'Dr. Ranga Rodrigo',        title:'Senior Lecturer',                         affiliations:['University of Moratuwa','PhD — Electrical & Computer Engineering, Western University'],     imageUrl:'https://educationweek.ieee.lk/img/speakers/Ranga.webp'       },
-  { id:'subodha',      name:'Dr. Subodha Charles',      title:'Senior Lecturer & Group Chairman',        affiliations:['University of Moratuwa','Pearl Cluster','PhD — Embedded Systems, University of Florida'],   imageUrl:'https://educationweek.ieee.lk/img/speakers/Subodha.webp'     },
-  { id:'rushdi',       name:'Mr. Rushdi Hadhi',          title:'Director Operations',                     affiliations:['Jobdaddy.lk','Former Head of Career Guidance, NSBM'],                                       imageUrl:'https://educationweek.ieee.lk/img/speakers/Rushdi.webp'       },
-  { id:'ushan',        name:'Mr. Ushan Chaminda',        title:'CEO, Gavesha Labs',                       affiliations:['Gavesha Labs','BSc in Information Technology (UOM)'],                                       imageUrl:'https://educationweek.ieee.lk/img/speakers/Ushan.webp'       },
-  { id:'sabilashan',   name:'Mr. Sabilashan Ganeshan',   title:'Country Lead',                            affiliations:['Perplexity AI'],                                                                            imageUrl:'https://educationweek.ieee.lk/img/speakers/Sabilashan.webp'  },
-  { id:'chamodi',      name:'Ms. Chamodi Hansika',       title:'Software Engineer',                        affiliations:['Dutton Labs LK'],                                                                           imageUrl:'https://educationweek.ieee.lk/img/speakers/Chamodi.webp'     },
+  { id:'rahula',       name:'Prof. Rahula Attalage',    title:'Senior Professor, Mechanical Engineering', affiliations:['University of Moratuwa','Commission Member, UGC'],                                          imageUrl:'https://educationweek.ieee.lk/2025/img/speakers/Rahula.webp'       },
+  { id:'vasanthapriyan',name:'Prof. Vasanthapriyan',   title:'Professor in Computer Science',            affiliations:['Founding Dean, Faculty of Computing at SUSL','Chair, IEEE Sri Lanka Section 2025'],         imageUrl:'https://educationweek.ieee.lk/2025/img/speakers/Vasanthapriyan.webp'},
+  { id:'roshan',       name:'Prof. Roshan Ragel',       title:'Professor, Dept. of Computer Science',    affiliations:['University of Peradeniya','AI Advisory Committee, ICTA','Consultancy CEO, LEARN'],          imageUrl:'https://educationweek.ieee.lk/2025/img/speakers/Roshan.webp'       },
+  { id:'sankalpa',     name:'Dr. Sankalpa Gamwarige',   title:'Managing Director',                       affiliations:['Nagarro','Senior VP, Trace','PhD — Electronics & Telecom Engineering'],                     imageUrl:'https://educationweek.ieee.lk/2025/img/speakers/Sankalpa.webp'     },
+  { id:'achintha',     name:'Dr. Achintha Kondarage',   title:'Staff Program Manager',                   affiliations:['Synopsys Inc.','PhD in Biomedical Engineering (UOM)','Visiting Lecturer, USJ'],             imageUrl:'https://educationweek.ieee.lk/2025/img/speakers/achintha.webp'     },
+  { id:'ranga',        name:'Dr. Ranga Rodrigo',        title:'Senior Lecturer',                         affiliations:['University of Moratuwa','PhD — Electrical & Computer Engineering, Western University'],     imageUrl:'https://educationweek.ieee.lk/2025/img/speakers/Ranga.webp'       },
+  { id:'subodha',      name:'Dr. Subodha Charles',      title:'Senior Lecturer & Group Chairman',        affiliations:['University of Moratuwa','Pearl Cluster','PhD — Embedded Systems, University of Florida'],   imageUrl:'https://educationweek.ieee.lk/2025/img/speakers/Subodha.webp'     },
+  { id:'rushdi',       name:'Mr. Rushdi Hadhi',          title:'Director Operations',                     affiliations:['Jobdaddy.lk','Former Head of Career Guidance, NSBM'],                                       imageUrl:'https://educationweek.ieee.lk/2025/img/speakers/Rushdi.webp'       },
+  { id:'ushan',        name:'Mr. Ushan Chaminda',        title:'CEO, Gavesha Labs',                       affiliations:['Gavesha Labs','BSc in Information Technology (UOM)'],                                       imageUrl:'https://educationweek.ieee.lk/2025/img/speakers/Ushan.webp'       },
+  { id:'sabilashan',   name:'Mr. Sabilashan Ganeshan',   title:'Country Lead',                            affiliations:['Perplexity AI'],                                                                            imageUrl:'https://educationweek.ieee.lk/2025/img/speakers/Sabilashan.webp'  },
+  { id:'chamodi',      name:'Ms. Chamodi Hansika',       title:'Software Engineer',                        affiliations:['Dutton Labs LK'],                                                                           imageUrl:'https://educationweek.ieee.lk/2025/img/speakers/Chamodi.webp'     },
 ];
 
 // ── Schedule ──────────────────────────────────────────────────────────────────
@@ -100,7 +100,6 @@ export const PARTNERS: Partner[] = [
   { id: "nenasa", name: "Nenasa", tier: "stem", logoUrl: "nanasa.png" },
   { id: "gavesha", name: "Gavesha Labs", tier: "stem", logoUrl: "gavesha.png" },
 ];
-
 // ── Contacts ──────────────────────────────────────────────────────────────────
 export const CONTACTS: ContactPerson[] = [
   {
@@ -108,9 +107,9 @@ export const CONTACTS: ContactPerson[] = [
     name: "Shakil Arifeen",
     role: "Vice Chairperson",
     organization: "IEEE Young Professionals Sri Lanka",
-    phone: "+94 710 646 688",
-    email: "eduweek@ieee.lk",
-    photo: "/assets/images/oc/chair_raees.jpg",
+    phone: "+94 71 724 6175",
+    email: "shakilarifeen@ieee.org",
+    photo: "/assets/images/oc/shakil.jpg",
   },
   {
     id: "kavindra",
@@ -118,7 +117,7 @@ export const CONTACTS: ContactPerson[] = [
     role: "Committee Member & OC Chair",
     organization: "IEEE Young Professionals Sri Lanka",
     phone: "+94 774 743 603",
-    email: "eduweek@ieee.lk",
+    email: "kavindra.weerasinghe@ieee.org",
     photo: "/assets/images/oc/kavindra.jpg",
 
   },
@@ -128,7 +127,7 @@ export const CONTACTS: ContactPerson[] = [
     role: "Chair",
     organization: "IEEE Sri Lanka Inspire",
     phone: "+94 76 495 3014",
-    email: "inspire@ieee.lk",
+    email: "raeesahamed@ieee.org",
     photo: "/assets/images/oc/chair_raees.jpg",
   },
 ];
