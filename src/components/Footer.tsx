@@ -13,7 +13,7 @@ export default function Footer(){
             <div style={{fontWeight:800,fontSize:'clamp(18px,3vw,26px)',color:'rgba(255,255,255,0.88)',letterSpacing:'-0.02em',marginBottom:6}}>Ready to attend?</div>
             <div style={{fontSize:14,color:'rgba(255,255,255,0.30)'}}>{eventDate.getDate()} {eventDate.toLocaleString('default', { month: 'long' })} {eventDate.getFullYear()} · TRACE Expert City · Free Entrance</div>
           </div>
-          <a href="https://educationweek.ieee.lk" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{textDecoration:'none',flexShrink:0}}>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLs7oBYwxT8XUVxzi-cd3Yc-6TOnpA_ZDTd8fj7Jk6yJto0g/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{textDecoration:'none',flexShrink:0}}>
             Register Free <ExternalLink size={14}/>
           </a>
         </div>
@@ -60,7 +60,7 @@ export default function Footer(){
           <div>
             <div style={{fontSize:9,fontWeight:600,color:'rgba(255,255,255,0.20)',letterSpacing:'0.1em',textTransform:'uppercase',fontFamily:'JetBrains Mono,monospace',marginBottom:16}}>Event Info</div>
             <div style={{display:'flex',flexDirection:'column',gap:8}}>
-              {['07 April 2025','TRACE Expert City','Colombo 10, Sri Lanka','Free Entrance','3 Audience Tracks','10+ Expert Speakers'].map(item=>(
+              {['23 April 2025','TRACE Expert City','Colombo 10, Sri Lanka','Free Entrance','3 Audience Tracks','10+ Expert Speakers'].map(item=>(
                 <div key={item} style={{display:'flex',alignItems:'center',gap:8,fontSize:12,color:'rgba(255,255,255,0.28)'}}>
                   <span style={{width:3,height:3,borderRadius:'50%',background:'#22c55e',flexShrink:0}}/>
                   {item}

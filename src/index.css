@@ -581,3 +581,15 @@ a { font-family: inherit; }
   .scene,.grain { display: none; }
   body { background: white; color: black; }
 }
+
+@keyframes button-anim {
+    0%, 100%{
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+.animate-button {
+    animation: button-anim 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}

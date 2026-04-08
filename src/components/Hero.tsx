@@ -41,10 +41,10 @@ export default function Hero() {
           showcase expertise and explore emerging technologies.
         </p>
 
-        <div className='flex flex-col justify-center items-center gap-3'>
+        <div className='flex flex-col justify-center items-center gap-6'>
           <span className='text-xs font-light'>Organized By</span>
-          <div className="flex flex-row justify-center gap-6 h-12 mb-8 -mt-2">
-            <img src="/assets/images/logo/yp.png" alt="Young Professionals" className='hue-rotate-180 invert'/>
+          <div className="flex flex-row justify-center gap-6 h-20 mb-8 -mt-2 bg-white px-4 py-4 rounded-2xl">
+            <img src="/assets/images/logo/yp.png" alt="Young Professionals" className=''/>
             <img src="/assets/images/logo/slinspire-logo.png" alt="SLInspire"/>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function Hero() {
               ))}
             </div>
             <div style={{display:'flex',flexDirection:'column',gap:10}}>
-              {[[<MapPin size={13}/>, 'TRACE Expert City, Colombo 10'],[<Calendar size={13}/>, '07 April 2025 · 9:00 AM onwards'],[<Users size={13}/>, '10+ Expert Speakers across 3 tracks'],[<Ticket size={13}/>, 'Free — Open to all attendees']].map(([icon,text],i)=>(
+              {[[<MapPin size={13}/>, 'TRACE Expert City, Colombo 10'],[<Calendar size={13}/>, '23 April 2025 · 9:00 AM onwards'],[<Users size={13}/>, '10+ Expert Speakers across 3 tracks'],[<Ticket size={13}/>, 'Free — Open to all attendees']].map(([icon,text],i)=>(
                 <div key={i} style={{display:'flex',alignItems:'center',gap:8,color:'rgba(255,255,255,0.40)',fontSize:13,fontWeight:500}}>
                   <span style={{color:'rgba(134,239,172,0.45)',flexShrink:0}}>{icon as React.ReactNode}</span>{text as string}
                 </div>
