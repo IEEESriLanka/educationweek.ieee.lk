@@ -30,7 +30,7 @@ export default function App() {
         <Hero/>
         <About    id="about"/>
         <Features id="features"/>
-        <Speakers id="speakers"/>
+        {/* <Speakers id="speakers"/> */}
         <Schedule id="schedule"/>
         <Partners id="partners"/>
         <Contact  id="contact"/>

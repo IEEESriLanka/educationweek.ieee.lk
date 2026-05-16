@@ -43,7 +43,7 @@ export default function Hero() {
 
         <div className='flex flex-col justify-center items-center gap-6'>
           <span className='text-xs font-light'>Organized By</span>
-          <div className="flex flex-row justify-center gap-6 h-20 mb-8 -mt-2 bg-white px-4 py-4 rounded-2xl">
+          <div className="flex flex-row justify-center gap-6 h-20 mb-8 -mt-2 bg-white shadow-lg shadow-white/20 px-4 py-4 rounded-2xl">
             <img src="/assets/images/logo/yp.png" alt="Young Professionals" className=''/>
             <img src="/assets/images/logo/slinspire-logo.png" alt="SLInspire"/>
           </div>
