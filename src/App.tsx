@@ -3,7 +3,6 @@ import Navbar   from './components/Navbar';
 import Hero     from './components/Hero';
 import About    from './components/About';
 import Features from './components/Features';
-import Speakers from './components/Speakers';
 import Schedule from './components/Schedule';
 import Partners from './components/Partners';
 import Contact  from './components/Contact';
