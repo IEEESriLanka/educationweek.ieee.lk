@@ -1,5 +1,5 @@
 import { useEffect,useRef } from 'react';
-import { Phone,Mail,MapPin,ArrowRight,Clock, MousePointerClickIcon, MapIcon } from 'lucide-react';
+import { Phone,Mail,MapPin,ArrowRight,Clock, MousePointerClickIcon } from 'lucide-react';
 import { CONTACTS } from '../data';
 import type { ContactPerson,SectionProps } from '../types';
 import { eventDate } from '@/App';
