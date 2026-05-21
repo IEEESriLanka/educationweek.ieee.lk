@@ -1,5 +1,5 @@
 import { useEffect,useRef } from 'react';
-import { Phone,Mail,MapPin,ArrowRight,Clock, MousePointerClickIcon } from 'lucide-react';
+import { Phone,Mail,MapPin,ArrowRight,Clock, MousePointerClickIcon, MapIcon } from 'lucide-react';
 import { CONTACTS } from '../data';
 import type { ContactPerson,SectionProps } from '../types';
 import { eventDate } from '@/App';
@@ -28,9 +28,9 @@ export default function Contact({id}:SectionProps){
               <div style={{fontSize:9,fontWeight:600,color:'rgba(74,222,128,0.5)',letterSpacing:'0.12em',textTransform:'uppercase',fontFamily:'JetBrains Mono,monospace',marginBottom:20}}>Venue & Details</div>
               <div style={{display:'flex',flexDirection:'column',gap:14}}>
                 {[
-                  {icon:<MapPin size={14}/>,label:'Location',text:'TRACE Expert City, Colombo 10',c:'#4ade80'},
-                  {icon:<Clock size={14}/>,label:'Date & Time',text:`${eventDate.getDate()} ${eventDate.toLocaleString('default', { month: 'long' })} ${eventDate.getFullYear()} · 8:00 AM onwards`,c:'#93c5fd'},
-                  {icon:<Mail size={14}/>,label:'Entry',text:'Free - Open to all attendees',c:'#f9a8d4'},
+                  {icon:<MapPin size={14} color='#4ade80'/>,label:'Location',text:'TRACE Expert City, Colombo 10',c:'#4ade8033'},
+                  {icon:<Clock size={14} color='#93c5fd'/>,label:'Date & Time',text:`${eventDate.getDate()} ${eventDate.toLocaleString('default', { month: 'long' })} ${eventDate.getFullYear()} · 8:00 AM onwards`,c:'#93c5fd33'},
+                  {icon:<Mail size={14} color='#f9a8d4'/>,label:'Entry',text:'Free - Open to all attendees',c:'#f9a8d433'},
                 ].map(({icon,label,text,c})=>(
                   <div key={label} style={{display:'flex',alignItems:'flex-start',gap:12}}>
                     <div style={{width:30,height:30,borderRadius:8,background:`${c.replace(')',',0.12)').replace('rgb','rgba')}`,display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,color:c,border:`1px solid ${c.replace(')',',0.2)').replace('rgb','rgba')}`}}>{icon}</div>

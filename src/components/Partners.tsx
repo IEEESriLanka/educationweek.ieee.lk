@@ -21,13 +21,13 @@ export default function Partners({id}:SectionProps){
   const grouped=ORDER.reduce<Record<Tier,Partner[]>>((acc,t)=>{ acc[t]=PARTNERS.filter(p=>p.tier===t); return acc; },{} as Record<Tier,Partner[]>);
 
   return(
-    <section id={id} ref={ref} className="section bg-white text-black" style={{position:'relative',zIndex:2}}>
-      <div className="wrap" style={{maxWidth:1100,margin:'0 auto'}}>
+    <section id={id} ref={ref} className="section text-white" style={{position:'relative',zIndex:2}}>
+      <div className="wrap" style={{margin:'0 auto'}}>
         <div className="rv" style={{textAlign:'center',marginBottom:56}}>
           <span className="eyebrow">Partners</span>
           <h2 className="text-2xl font-bold" style={{marginTop:8}}>Backed by industry leaders</h2>
         </div>
-        <div style={{display:'flex',flexDirection:'column',gap:44}}>
+        <div className="rv glass-green p-14" style={{display:'flex',flexDirection:'column',gap:44}}>
           {ORDER.map(tier=>{
             const items=grouped[tier]; if(!items.length) return null;
             const {label,dot,size,maxW}=CFG[tier];
@@ -44,8 +44,13 @@ export default function Partners({id}:SectionProps){
                     <div key={p.id} className="partner-pill aria-hidden:hidden" aria-hidden={!!p.logoUrl} style={{flex:`1 1 ${maxW*0.5}px`,maxWidth:maxW}}>
                       <span style={{fontWeight:700,fontSize:size,color:'rgba(255,255,255,0.70)',textAlign:'center'}}>{p.name}</span>
                     </div>
-                    <div key={p.id+'-logo'} className="partner-logo aria-hidden:hidden" aria-hidden={!p.logoUrl} style={{flex:`1 1 ${maxW*0.5}px`,maxWidth:maxW}}>
-                      {p.logoUrl && <img src={"/assets/images/partners/"+p.logoUrl} className='' alt={p.name} style={{maxWidth:'100%',maxHeight:40,objectFit:'contain',opacity:0.95}}/>}
+                    <div className='relative'>
+                      <div key={p.id+'-logo'} className="absolute partner-logo grayscale blur-[30px] shadow-md shadow-white p-2 aria-hidden:hidden" aria-hidden={!p.logoUrl} style={{flex:`1 1 ${maxW*0.5}px`,maxWidth:maxW}}>
+                        {p.logoUrl && <img src={"/assets/images/partners/"+p.logoUrl} className='' alt={p.name} style={{maxWidth:'100%',maxHeight:40,objectFit:'contain',opacity:1}}/>}
+                      </div>
+                      <div key={p.id+'-logo'} className="partner-logo p-2 aria-hidden:hidden" aria-hidden={!p.logoUrl} style={{flex:`1 1 ${maxW*0.5}px`,maxWidth:maxW}}>
+                        {p.logoUrl && <img src={"/assets/images/partners/"+p.logoUrl} className='' alt={p.name} style={{maxWidth:'100%',maxHeight:40,objectFit:'contain',opacity:1}}/>}
+                      </div>
                     </div>
                     </>
                   ))}
