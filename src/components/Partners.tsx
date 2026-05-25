@@ -3,12 +3,13 @@ import { PARTNERS } from '../data';
 import type { Partner,SectionProps } from '../types';
 
 type Tier=Partner['tier'];
-const ORDER:Tier[]=['title','ecosystem','colab','program','stem'];
+const ORDER:Tier[]=['title','ecosystem','colab','program','industry','stem'];
 const CFG:Record<Tier,{label:string;dot:string;size:string;maxW:number}>={
   'title':        {label:'Title Partner',         dot:'#fde047',size:'19px',maxW:300},
   'ecosystem':    {label:'Ecosystem Partner',     dot:'#4ade80',size:'16px',maxW:260},
   'colab':        {label:'In a Collaboration With',         dot:'#f472b6',size:'14px',maxW:190},
   'program':      {label:'Program Partners',     dot:'#93c5fd',size:'14px',maxW:190},
+  'industry':     {label:'Industry Partners',    dot:'#fbbf24',size:'14px',maxW:190},
   'stem':         {label:'STEM Partners',          dot:'#5eead4',size:'14px',maxW:190},
 };
 
@@ -38,20 +39,15 @@ export default function Partners({id}:SectionProps){
                   <span className='' style={{fontSize:10,fontWeight:600,letterSpacing:'0.1em',textTransform:'uppercase',fontFamily:'JetBrains Mono,monospace'}}>{label}</span>
                   <div style={{flex:1,height:1,background:'rgba(0,0,0,0.07)'}}/>
                 </div>
-                <div style={{display:'flex',flexWrap:'wrap',gap:10}}>
+                <div className='flex flex-wrap gap-x-8 gap-y-4'>
                   {items.map(p=>(
                     <>
-                    <div key={p.id} className="partner-pill aria-hidden:hidden" aria-hidden={!!p.logoUrl} style={{flex:`1 1 ${maxW*0.5}px`,maxWidth:maxW}}>
+                    <div key={p.id} className="partner-pill aria-hidden:hidden" aria-hidden={!!p.logoUrl}>
                       <span style={{fontWeight:700,fontSize:size,color:'rgba(255,255,255,0.70)',textAlign:'center'}}>{p.name}</span>
                     </div>
-                    <div className='relative'>
-                      <div key={p.id+'-logo'} className="absolute partner-logo grayscale blur-[30px] shadow-md shadow-white p-2 aria-hidden:hidden" aria-hidden={!p.logoUrl} style={{flex:`1 1 ${maxW*0.5}px`,maxWidth:maxW}}>
+                      <div key={p.id+'-logo'} className="partner-logo aria-hidden:hidden" aria-hidden={!p.logoUrl}>
                         {p.logoUrl && <img src={"/assets/images/partners/"+p.logoUrl} className='' alt={p.name} style={{maxWidth:'100%',maxHeight:40,objectFit:'contain',opacity:1}}/>}
                       </div>
-                      <div key={p.id+'-logo'} className="partner-logo p-2 aria-hidden:hidden" aria-hidden={!p.logoUrl} style={{flex:`1 1 ${maxW*0.5}px`,maxWidth:maxW}}>
-                        {p.logoUrl && <img src={"/assets/images/partners/"+p.logoUrl} className='' alt={p.name} style={{maxWidth:'100%',maxHeight:40,objectFit:'contain',opacity:1}}/>}
-                      </div>
-                    </div>
                     </>
                   ))}
                 </div>

@@ -593,3 +593,8 @@ a { font-family: inherit; }
 .animate-button {
     animation: button-anim 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
+
+.img-border {
+  background-color: white;
+  padding: 4px;
+}
