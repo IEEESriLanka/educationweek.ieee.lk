@@ -9,6 +9,6 @@ export interface ScheduleSession {
   speaker?: string;
 }
 export interface Organizer  { id: string; name: string; logoUrl?: string; type: 'organizer'|'collaboration'|'support'; }
-export interface Partner    { id: string; name: string; logoUrl?: string; tier: 'title'|'ecosystem'|'program'|'colab'|'stem'; }
+export interface Partner    { id: string; name: string; logoUrl?: string; tier: 'title'|'ecosystem'|'program'|'colab'|'stem'|'industry'; }
 export interface ContactPerson { id: string; name: string; role: string; organization: string; phone: string; email: string; photo: string }
 export interface SectionProps  { id?: string; className?: string; }

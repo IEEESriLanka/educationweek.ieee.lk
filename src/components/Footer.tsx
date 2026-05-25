@@ -13,7 +13,7 @@ export default function Footer(){
             <div style={{fontWeight:800,fontSize:'clamp(18px,3vw,26px)',color:'rgba(255,255,255,0.88)',letterSpacing:'-0.02em',marginBottom:6}}>Ready to attend?</div>
             <div style={{fontSize:14,color:'rgba(255,255,255,0.30)'}}>{eventDate.getDate()} {eventDate.toLocaleString('default', { month: 'long' })} {eventDate.getFullYear()} · TRACE Expert City · Free Entrance</div>
           </div>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLs7oBYwxT8XUVxzi-cd3Yc-6TOnpA_ZDTd8fj7Jk6yJto0g/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{textDecoration:'none',flexShrink:0}}>
+          <a href="https://forms.gle/LM4bf36zRbT4oWhA9" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{textDecoration:'none',flexShrink:0}}>
             Register Free <ExternalLink size={14}/>
           </a>
         </div>

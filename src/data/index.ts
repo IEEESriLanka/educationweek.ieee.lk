@@ -95,10 +95,18 @@ export const PARTNERS: Partner[] = [
   { id: 'sight', name: 'SIGHT', tier: 'colab', logoUrl: 'sight.png' },
   { id: 'sl2college', name: 'SL2C', tier: 'colab', logoUrl: 'sl2c.png' },
   { id: "studpro", name: "StudPro", tier: "program", logoUrl: "studpro.png" },
-  { id: "y2npro", name: "Y2NPro", tier: "program", logoUrl: "y2npro.png" },
-  { id: "aidsl", name: "AIDSL", tier: "program", logoUrl: "aidsl.png" },
+  // { id: "aidsl", name: "AIDSL", tier: "program", logoUrl: "aidsl.png" },
+  { id: "intalent", name: "Intalent Asia", tier: "industry", logoUrl: "intalent.png" },
+  { id: "altrium", name: "altrium", tier: "industry", logoUrl: "altrium.png" },
+  { id: "frontwalker", name: "FRONTWALKER", tier: "industry", logoUrl: "frontwalker.png" },
+  { id: "codemite", name: "CODEMITE", tier: "industry", logoUrl: "codemite.png" },
+  { id: "vsis", name: "VSIS", tier: "industry", logoUrl: "vsis.png" },
+  { id: "nagarro", name: "Nagarro", tier: "industry", logoUrl: "nagarro.png" },
+  { id: "calcey", name: "Calcey", tier: "industry", logoUrl: "calcey.png" },
   { id: "nenasa", name: "Nenasa", tier: "stem", logoUrl: "nanasa.png" },
+  { id: "seds", name: "SEDS", tier: "stem", logoUrl: "seds.png" },
   { id: "gavesha", name: "Gavesha Labs", tier: "stem", logoUrl: "gavesha.png" },
+  { id: "stemup", name: "STEMUP", tier: "stem", logoUrl: "stemup.png" },
 ];
 // ── Contacts ──────────────────────────────────────────────────────────────────
 export const CONTACTS: ContactPerson[] = [
