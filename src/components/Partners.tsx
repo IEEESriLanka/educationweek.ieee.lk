@@ -31,7 +31,7 @@ export default function Partners({id}:SectionProps){
         <div className="rv glass-green p-14" style={{display:'flex',flexDirection:'column',gap:44}}>
           {ORDER.map(tier=>{
             const items=grouped[tier]; if(!items.length) return null;
-            const {label,dot,size,maxW}=CFG[tier];
+            const {label,dot,size}=CFG[tier];
             return(
               <div key={tier} className="rv">
                 <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:16}}>
