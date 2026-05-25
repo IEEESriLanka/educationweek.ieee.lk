@@ -102,10 +102,11 @@ export const PARTNERS: Partner[] = [
   { id: "codemite", name: "CODEMITE", tier: "industry", logoUrl: "codemite.png" },
   { id: "vsis", name: "VSIS", tier: "industry", logoUrl: "vsis.png" },
   { id: "nagarro", name: "Nagarro", tier: "industry", logoUrl: "nagarro.png" },
-  // { id: "codegen", name: "CODEGEN", tier: "industry", logoUrl: "codegen.png" },
+  { id: "calcey", name: "Calcey", tier: "industry", logoUrl: "calcey.png" },
   { id: "nenasa", name: "Nenasa", tier: "stem", logoUrl: "nanasa.png" },
   { id: "seds", name: "SEDS", tier: "stem", logoUrl: "seds.png" },
   { id: "gavesha", name: "Gavesha Labs", tier: "stem", logoUrl: "gavesha.png" },
+  { id: "stemup", name: "STEMUP", tier: "stem", logoUrl: "stemup.png" },
 ];
 // ── Contacts ──────────────────────────────────────────────────────────────────
 export const CONTACTS: ContactPerson[] = [
