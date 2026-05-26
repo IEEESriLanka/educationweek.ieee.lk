@@ -60,7 +60,13 @@ export default function Footer(){
           <div>
             <div style={{fontSize:9,fontWeight:600,color:'rgba(255,255,255,0.20)',letterSpacing:'0.1em',textTransform:'uppercase',fontFamily:'JetBrains Mono,monospace',marginBottom:16}}>Event Info</div>
             <div style={{display:'flex',flexDirection:'column',gap:8}}>
-              {['23 April 2025','TRACE Expert City','Colombo 10, Sri Lanka','Free Entrance','3 Audience Tracks','10+ Expert Speakers'].map(item=>(
+              {[
+                `${eventDate.getDate()} ${eventDate.toLocaleString("default", { month: "short" })} ${eventDate.getFullYear()}`,
+                'TRACE Expert City',
+                'Colombo 10, Sri Lanka',
+                'Free Entrance',
+                '3 Audience Tracks',
+              ].map(item=>(
                 <div key={item} style={{display:'flex',alignItems:'center',gap:8,fontSize:12,color:'rgba(255,255,255,0.28)'}}>
                   <span style={{width:3,height:3,borderRadius:'50%',background:'#22c55e',flexShrink:0}}/>
                   {item}

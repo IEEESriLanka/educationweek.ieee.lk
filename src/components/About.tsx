@@ -54,7 +54,7 @@ export default function About({id}:SectionProps){
             ))}
             <div className="rv d4" style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:12,marginTop:32}}>
               <Stat target={3}   suffix="+"      label="Audience Tracks"  started={started}/>
-              <Stat target={11}  suffix="+"      label="Expert Speakers"  started={started}/>
+              <Stat target={8}  suffix=""      label="Sessions"  started={started}/>
               <Stat target={100} suffix="% Free" label="Entrance"         started={started}/>
               <Stat target={1}   suffix=" Day"   label="Packed Programme" started={started}/>
             </div>
@@ -69,7 +69,7 @@ export default function About({id}:SectionProps){
               </div>
               <div style={{fontFamily:'JetBrains Mono,monospace',fontSize:10,color:'rgba(255,255,255,0.25)',marginTop:10,letterSpacing:'0.07em'}}>SRI LANKA · </div>
             </div>
-            {[{title:'Organized by',items:orgs,c:'#4ade80'},{title:'In Collaboration with',items:collab,c:'#93c5fd'},{title:'Supported by',items:supp,c:'#c4b5fd'}].map(({title,items,c},gi)=>(
+            {[{title:'Organized by',items:orgs,c:'#4ade80'},{title:'In Collaboration with',items:collab,c:'#93c5fd'}].map(({title,items,c},gi)=>(
               <div key={title} className={`rv glass d${gi+2}`} style={{padding:'18px 20px',borderRadius:'var(--r2)'}}>
                 <div style={{fontSize:9,fontWeight:600,color:'rgba(255,255,255,0.25)',letterSpacing:'0.1em',textTransform:'uppercase',fontFamily:'JetBrains Mono,monospace',marginBottom:12}}>{title}</div>
                 <div style={{display:'flex',flexDirection:'column',gap:8}}>
