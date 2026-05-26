@@ -24,7 +24,7 @@ export default function About({id}:SectionProps){
 
   const orgs=ORGANIZERS.filter(o=>o.type==='organizer');
   const collab=ORGANIZERS.filter(o=>o.type==='collaboration');
-  const supp=ORGANIZERS.filter(o=>o.type==='support');
+  // const supp=ORGANIZERS.filter(o=>o.type==='support');
 
   function getOrdinalSuffix(day: number) {
     if (day > 3 && day < 21) return 'th';

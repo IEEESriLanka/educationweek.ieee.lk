@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, MapPin, Calendar, Ticket, ExternalLink, Users } from 'lucide-react';
+import { ArrowRight, MapPin, Calendar, Ticket, ExternalLink } from 'lucide-react';
 import Countdown from './Countdown';
 import { eventDate } from '@/App';
 
