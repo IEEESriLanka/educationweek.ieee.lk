@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, MapPin, Calendar, Ticket, ExternalLink, Users } from 'lucide-react';
+import { ArrowRight, MapPin, Calendar, Ticket, ExternalLink } from 'lucide-react';
 import Countdown from './Countdown';
 import { eventDate } from '@/App';
 
@@ -75,7 +75,7 @@ export default function Hero() {
               ))}
             </div>
             <div style={{display:'flex',flexDirection:'column',gap:10}}>
-              {[[<MapPin size={13}/>, 'TRACE Expert City, Colombo 10'],[<Calendar size={13}/>, '23 April 2025 · 9:00 AM onwards'],[<Users size={13}/>, '10+ Expert Speakers across 3 tracks'],[<Ticket size={13}/>, 'Free — Open to all attendees']].map(([icon,text],i)=>(
+              {[[<MapPin size={13}/>, 'TRACE Expert City, Colombo 10'],[<Calendar size={13}/>, `${eventDate.getDate()} ${eventDate.toLocaleString('default', { month: 'short' })} · 9:00 AM onwards`],[<Ticket size={13}/>, 'Free — Open to all attendees']].map(([icon,text],i)=>(
                 <div key={i} style={{display:'flex',alignItems:'center',gap:8,color:'rgba(255,255,255,0.40)',fontSize:13,fontWeight:500}}>
                   <span style={{color:'rgba(134,239,172,0.45)',flexShrink:0}}>{icon as React.ReactNode}</span>{text as string}
                 </div>
@@ -92,7 +92,7 @@ export default function Hero() {
           {[
             {v:`${eventDate.getDate()} ${eventDate.toLocaleString('default', { month: 'short' })}`, label:'Event Date', sub: eventDate.getFullYear()},
             {v:'Free', label:'Entrance', sub:'No registration fee'},
-            {v:'10+', label:'Expert Speakers', sub:'Industry & academia'},
+            {v:'8', label:'Sessions', sub:'School Students & Undergraduates'},
           ].map(s=>(
             <div key={s.label} className="glass glass-hover" style={{padding:'clamp(16px,2.5vw,24px) clamp(16px,2.5vw,28px)',borderRadius:'var(--r2)'}}>
               <div style={{fontWeight:800,fontSize:'clamp(20px,3vw,34px)',color:'rgba(255,255,255,0.88)',letterSpacing:'-0.03em',lineHeight:1}}>{s.v}</div>

@@ -33,10 +33,10 @@ export const HERO_STATS: HeroStat[] = [
 // ── Features ──────────────────────────────────────────────────────────────────
 export const FEATURES: Feature[] = [
   { id:'career',  title:'Career Guidance',      description:'Expert-led sessions on future-ready careers for school students and undergraduates.',   icon:'Briefcase',    color:'electric' },
-  { id:'teacher', title:'Teacher Empowerment',  description:'Modern teaching methods and technology integration for classroom educators.',            icon:'GraduationCap',color:'cyan'     },
+  // { id:'teacher', title:'Teacher Empowerment',  description:'Modern teaching methods and technology integration for classroom educators.',            icon:'GraduationCap',color:'cyan'     },
   { id:'stem',    title:'STEM Discovery',        description:'Hands-on Arduino challenges and interactive sessions to ignite STEM innovation.',        icon:'FlaskConical', color:'emerald'  },
-  { id:'ai',      title:'Research & AI',         description:'Leverage Perplexity AI and explore groundbreaking research insights from top professors.',icon:'Brain',        color:'violet'   },
-  { id:'grad',    title:'Graduate Development',  description:'Grant writing, navigating the age of AI, and maximising IEEE resources for graduates.',  icon:'BookOpen',     color:'gold'     },
+  // { id:'ai',      title:'Research & AI',         description:'Leverage Perplexity AI and explore groundbreaking research insights from top professors.',icon:'Brain',        color:'violet'   },
+  // { id:'grad',    title:'Graduate Development',  description:'Grant writing, navigating the age of AI, and maximising IEEE resources for graduates.',  icon:'BookOpen',     color:'gold'     },
   { id:'network', title:'Networking & Impact',   description:'IMPACT Mic, industry connections, and meaningful conversations with speakers.',          icon:'Network',      color:'rose'     },
 ];
 
